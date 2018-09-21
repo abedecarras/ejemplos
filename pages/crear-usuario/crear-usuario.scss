@@ -1,0 +1,83 @@
+page-crear-usuario {
+
+  .text-input {
+    font-weight: bold;
+    font-size: 90%;
+    margin-bottom: 0px;
+  }
+
+  .white {
+    color: white;
+  }
+
+  .arrow {
+    font-size: 3rem;
+  }
+
+  .btn-back {
+    margin-left: -50%;
+    margin-top: 40%;
+  }
+
+  img {
+    max-width: 100%;
+    border: 0;
+    position: absolute;
+    right: 17px;
+    width: 10rem;
+  }
+
+  .margin {
+    margin-top: 20px;
+    margin-left: -16px;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+
+  .navbar {
+    display: -webkit-box;
+  }
+
+  .container {
+    background-color: white;
+    height: 25%;
+    border-radius: 2%;
+  }
+
+  ion-icon.icon.icon-md.ion-ios-help-circle-outline {
+    // font-size: 2.3rem;
+    font-weight: bold;
+  }
+
+  ion-icon {
+    font-size: 2.3rem;
+  }
+
+  .margin-inputs{
+    // margin-top: 10px;
+    //margin-left: 0px;
+    height: 0px;
+    width: 95%;
+    margin-left: 2%;
+  }
+
+  .item-md {
+    background-color: transparent;
+  }
+
+  .item-md.item-block .item-inner {
+    border-bottom: 1px solid #d34798;
+   //  border-bottom-color: grey;
+    box-shadow: #d34798;
+  }
+
+  button {
+    background-color: transparent;
+  }
+
+  button.text.disable-hover.button.button-md.button-default.button-default-md.button-block.button-block-md.button-large.button-large-md {
+    margin-top: 10%;
+  }
+
+
+}

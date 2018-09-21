@@ -1,0 +1,48 @@
+
+<ion-header style="top:7%;">
+
+  <ion-navbar>
+    <button style="color:white;" ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+		<div class="">
+			<img src="assets/imgs/bg.jpg" class="imgPos">
+		</div>
+	  <div class="">
+	   	<ion-title text-center class="text" style="margin-top:-37%;">Novedades</ion-title>
+	  </div>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-fab bottom right>
+    <button ion-fab (click)="goHome()">
+      <ion-icon name="ios-home"></ion-icon>
+    </button>
+  </ion-fab>
+
+          <ion-item text-wrap>
+            <ion-avatar item-start>
+              <img src="{{ avatarUrl }}">
+            </ion-avatar>
+            <div class="bloque">
+              <h2><b>{{ titulo }}</b></h2>
+            </div>
+          </ion-item>
+
+          <h6 class="descripcion">{{ cuerpo }}</h6>
+
+          <div class="descargar" *ngFor="let a of adjuntos">
+            <div (click)="open(a.URL_Archivo);">
+              <button ion-button class="adjunto family" icon-start>
+                <ion-icon name="ios-link"></ion-icon>
+                adjunto
+              </button>
+              <h6>Descargar {{ a.NombreArchivo }}</h6>
+            </div>
+
+          </div>
+
+</ion-content>

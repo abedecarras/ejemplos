@@ -1,0 +1,193 @@
+page-ver-ticket {
+
+  // Navbar Style
+
+  ion-navbar.toolbar.toolbar-md {
+    margin-top: 0%!important;
+  }
+
+
+  .toolbar-title.toolbar-title-md {
+    color: white;
+  }
+
+  ion-title.text.title.title-md {
+    margin-left: -10%;
+    width: 100%;
+  }
+
+  .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+    color: #ffffff;
+    background-color: transparent;
+  }
+
+  // content
+
+  .detalle {
+    width: 100%;
+    border-bottom: 1px solid rgb(173, 173, 173);
+  }
+
+  h2 {
+    font-weight: bold!important;
+    float: left;
+    position: relative;
+    margin-top: 0px;
+    left: 30%;
+    margin-top: 3px !important;
+
+  }
+
+  // first-child {margin-top: 0px !important;}
+
+  .calendar {
+    font-size:2.5em;
+    color: color($colors, secondary, base); //#232222;
+    position: relative;
+    top: -3px;
+    left: 35%;
+  }
+
+  ion-label.label.label-md {
+    margin: 0 8px 0 0!important;
+    height: 102px;
+    // padding-top: 15px;
+  }
+
+  ion-label {
+    display: inline;
+  }
+
+  .vecino {
+    margin-top: -3%;
+  }
+
+  #nombre {
+    margin-top: 5%;
+    width: 60%;
+  }
+
+  img.avatar:first-child {
+    margin-left: 17%;
+    margin-top: 3%;
+    width: 10%;
+  }
+
+  // .avatar {
+  //   width: 10%;
+  //   margin-left: 23%!important;
+  // }
+
+  img {
+    width: 30%;
+    // margin-left: 1%;
+  }
+
+  div img:first-child {
+    margin-left: 3%;
+  }
+
+  h4 span {
+    color: #5FC666;
+    font-size: 0.8em;
+    padding: 2% 4%;
+    text-transform: uppercase;
+  }
+
+  ion-icon.icon.icon-md.ion-md-checkbox {
+    color: #5FC666;
+  }
+
+  .grey {
+    color: rgb(140, 137, 137);
+  }
+
+  // checkbox de afecta a otra unidad
+  .checkbox-icon {
+    left: 90px;
+  }
+
+  // unidad afectada
+  #select2.select-md {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  // center placeholder
+  // .text-input-md {
+  //   text-align: center;
+  //   padding: 0;
+  //   width: calc(100% - 8px - 8px);
+  // }
+
+  // colo placeholder Comentarios
+  .text-input::-webkit-input-placeholder {
+    text-indent: 0;
+    color: rgb(140, 137, 137);
+  }
+
+  .item-md.item-block .item-inner {
+    border-bottom: none;
+  }
+
+  .item-inner {
+    height: 100px;
+  }
+
+  ion-select {
+    max-width: 150%;
+  }
+
+  #myInput {
+    width: calc(100% - 10px);
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+  }
+
+  .boton {
+    height: 50px;
+    margin-bottom: 11%;
+    background-color: #e11d1e;
+  }
+
+  .green-border {
+    color: #5FC666;
+    border: 1px solid #5FC666;
+  }
+
+  .violet-border {
+    color: color($colors, primary, base);
+    border: 1px solid color($colors, primary, base);
+  }
+
+  .red-border {
+    color: red;
+    border: 1px solid red;
+  }
+
+  .yellow-border {
+    color: rgb(232, 202, 1);
+    border: 1px solid rgb(232, 202, 1);
+  }
+
+  .grey-border {
+    color: rgb(113, 113, 113);
+    border: 1px solid rgb(113, 113, 113);
+  }
+
+  .hidden {
+    display: none;
+    // visibility: hidden;
+  }
+
+  .checkbox-icon.checkbox-checked {
+    border-color: rgb(140, 137, 137);
+    background-color: rgb(140, 137, 137);
+  }
+
+  .checkbox-icon {
+    border-color: rgb(140, 137, 137)!important;
+  }
+
+}

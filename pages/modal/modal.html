@@ -1,0 +1,63 @@
+
+<ion-header>
+
+  <!-- <ion-navbar>
+    <ion-title>ModalPage</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="closeModal()">close</button>
+    </ion-buttons>
+  </ion-navbar> -->
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-buttons end>
+    <button ion-button (click)="closeModal()">X</button>
+  </ion-buttons>
+
+  <div text-center>
+    <img style="margin-top:-10%" src="./assets/imgs/5-yellow.png" alt="">
+  </div>
+
+
+  <h3 text-center>HOY EL CONSORCIO ESTA: <i>GENIAL</i></h3>
+
+  <h6>ESTE ESTADO REPRESENTA EL PROMEDIO DE LA VOTACION DE TUS VECINOS</h6>
+  <hr>
+  <h5 text-center>ELEGÍ CUAL ES TU ESTADO</h5>
+
+  <div class="mood-bar">
+  	<img class="emoji" style="margin-left:5%" src="./assets/imgs/1-yellow.png" alt="">
+
+  	<img class="emoji" style="margin-left:15%" src="./assets/imgs/3-yellow.png" alt="">
+
+  	<img class="emoji" style="margin-left:15%" src="./assets/imgs/5-yellow.png" alt="">
+
+  </div>
+
+
+  <ion-list radio-group [(ngModel)]="relationship">
+    <ion-item>
+      <ion-label>Regular</ion-label>
+      <ion-radio [disabled]="isDisabled"></ion-radio>
+    </ion-item>
+
+    <ion-item style="margin-left:15%">
+      <ion-label>Bueno</ion-label>
+      <ion-radio [disabled]="isDisabled"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Excelente</ion-label>
+      <ion-radio [disabled]="isDisabled"></ion-radio>
+    </ion-item>
+  </ion-list>
+  <hr style="margin-top:-5%">
+
+  <div class="div-button">
+    <button class="btn" (click)="closeModal()">Cancelar</button>
+    <button class="btn" (click)="closeModal()">Ok</button>
+  </div>
+
+</ion-content>

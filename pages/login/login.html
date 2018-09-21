@@ -1,0 +1,81 @@
+<head>
+	<!--     Fonts and icons     -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+</head>
+
+<ion-content class="login-background" padding>
+
+<div class="main">
+	<div class="navbar">
+		<button class="btn-back"(click)="goBack()">
+			<ion-icon class="arrow"name="md-arrow-back"></ion-icon>
+		</button>
+		<h4 class="text margin" text-uppercase>iniciar con usuario</h4>
+	  <img src="./assets/imgs/logo-veme.svg" />
+	</div>
+
+
+	<div class="container">
+			<ion-item class="margin-inputs">
+				<ion-input class="text text-input" #username placeholder="USUARIO"></ion-input>
+			</ion-item>
+
+		<!-- <div style="margin-top:20px;"> -->
+			<!-- <ion-item class="margin-inputs">
+				<ion-input type="{{type}}" type="password" class="text text-input" #password placeholder="CONTRASEÑA"></ion-input>
+				<div class="" item-right>
+					<button *ngIf="!showPass" icon-only (click)="showPassword()">
+						<ion-icon item-right style="margin-right:-9px;"><i class="material-icons" >help_outline</i></ion-icon>
+					</button>
+					<button *ngIf="showPass" icon-only (click)="showPassword()" [ngStyle]="{'background-color': buttonColorPassword}">
+			 			<ion-icon item-right style="margin-right:-9px;"><i class="material-icons" >help_outline</i></ion-icon>
+			 	 </button>
+				</div>
+			</ion-item> -->
+		<!-- </div> -->
+
+		<ion-item class="margin-inputs">
+		 	<ion-input class="text text-input" type="{{type}}" name="password" ngModel #password="ngModel" required pattern=".{4,10}" placeholder="CONTRASEÑA"></ion-input>
+			 <button *ngIf="!showPass" ion-button clear color="dark" type="button" item-right (click)="showPassword()">
+				 <!-- <ion-icon name="ios-help-circle-outline"></ion-icon> -->
+				 <ion-icon name="eye"></ion-icon>
+			 </button>
+			 <button *ngIf="showPass" ion-button clear color="dark" type="button" item-right (click)="showPassword()">
+				 <!-- <ion-icon name="ios-help-circle-outline"></ion-icon> -->
+				 <ion-icon name="eye-off"></ion-icon>
+
+			 </button>
+		</ion-item>
+
+
+		<!-- <ion-item>
+		 <ion-label floating>Password</ion-label>
+		 	<ion-input type="{{type}}" name="password" ngModel #password="ngModel" required pattern=".{4,10}"></ion-input>
+			 <button *ngIf="!showPass" ion-button clear color="dark" type="button" item-right (click)="showPassword()">
+				 <ion-icon name="ios-eye-off-outline"></ion-icon>
+			 </button>
+			 <button *ngIf="showPass" ion-button clear color="dark" type="button" item-right (click)="showPassword()">
+				 <ion-icon name="ios-eye-outline"></ion-icon>
+			 </button>
+		</ion-item> -->
+
+	</div>
+
+	<!-- clearInput me pone la cruz para borrar la contraseña -->
+
+
+	<button class="boton-contraseña" ion-button (click)='goPassword()' [ngStyle]="{'background-color': buttonColorPassword}">
+		¿OLVIDASTE TU CONTRASEÑA?
+	</button>
+
+
+<!-- [ngStyle]="{'background-color': buttonColor}" -->
+
+
+	<button ion-button large block class="text" (click)='login()'>
+		ingresar
+	</button>
+</div>
+
+</ion-content>

@@ -1,0 +1,26 @@
+
+<ion-content class="inicio-background" padding>
+
+  <img  src="./assets/imgs/logo-veme.svg" class="center" />
+
+  <button class="btn-large text btn-facebook" ion-button large icon-start (click)="loginWithFB()">
+    <ion-icon name="logo-facebook"></ion-icon>
+    ingresar con facebook
+  </button>
+  <button class="btn-large text margin-top" color="light" ion-button large (click)="goLogin()">iniciar con tu usuario</button>
+
+  <div class="break">
+    <hr class="line">
+    <h6>O</h6>
+    <hr class="line">
+  </div>
+
+
+  <button class="btn-large text" id="boton-crear" color="light" ion-button large icon-start (click)="goCrearUsuario()" style="visibility:hidden">
+    <img class="crear-icon" src="./assets/icon/login-icono.png">
+    crear un usuario
+  </button>
+
+  <p class="text parrafo" id="parrafo1" text-uppercase>al crear un usuario o iniciar sesión estás aceptando</p>
+  <p class="text parrafo" text-uppercase>nuestros <mark>términos y condiciones </mark> y <mark>pólitica de privacidad</mark></p>
+</ion-content>

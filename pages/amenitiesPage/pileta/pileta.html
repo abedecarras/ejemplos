@@ -1,0 +1,69 @@
+
+
+<ion-header style="top:7%;">
+
+  <ion-navbar>
+    <button style="color:white;" ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+		<div class="">
+			<img src="assets/imgs/bg.jpg" class="imgPos">
+		</div>
+	  <div class="">
+	   	<ion-title text-center class="text" style="margin-top:-37%;">Pileta</ion-title>
+	  </div>
+
+
+    <!-- <ion-buttons end>
+			<button ion-button (click)="goBack()">
+				<ion-icon name="md-close"></ion-icon>
+			</button>
+		</ion-buttons> -->
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+	  <div style="margin-left:30%;">
+	    <h6>Seleccione una fecha</h6>
+	  </div>
+
+	  <ion-item style="margin-left:20%;">
+	    <ion-datetime item-left displayFormat="DD/MM/YYYY" placeholder="04/07/2015" [(ngModel)]="myDate"></ion-datetime>
+	    <ion-label><ion-icon class="calendar" icon-end ios="ios-calendar" md="md-calendar"></ion-icon></ion-label>
+	  </ion-item>
+
+	  <div style="margin-left:30%;margin-top:10%;">
+	    <h6>Seleccione el horario</h6>
+	  </div>
+
+  <ion-list radio-group [(ngModel)]="relationship">
+  <ion-item>
+    <ion-label>07:00</ion-label>
+    <ion-radio item-left checked></ion-radio>
+  </ion-item>
+  <ion-item>
+    <ion-label>07:30</ion-label>
+    <ion-radio item-left [disabled]="isDisabled"></ion-radio>
+  </ion-item>
+  <ion-item>
+    <ion-label>08:00</ion-label>
+    <ion-radio item-left [disabled]="isDisabled"></ion-radio>
+  </ion-item>
+  <ion-item>
+    <ion-label>08:30</ion-label>
+    <ion-radio item-left [disabled]="isDisabled"></ion-radio>
+  </ion-item>
+  <ion-item>
+    <ion-label>09:00</ion-label>
+    <ion-radio item-left [disabled]="isDisabled"></ion-radio>
+  </ion-item>
+  <ion-item>
+    <ion-label>09:30</ion-label>
+    <ion-radio item-left [disabled]="isDisabled"></ion-radio>
+  </ion-item>
+  </ion-list>
+
+</ion-content>

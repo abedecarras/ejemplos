@@ -1,0 +1,155 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+		<img src="assets/imgs/bg.jpg" class="imgPos">
+		<ion-title text-center class="text" text-capitalize>generar ticket</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-fab bottom right>
+    <button ion-fab (click)="goHome()">
+      <ion-icon name="ios-home"></ion-icon>
+    </button>
+  </ion-fab>
+
+  <div [ngClass]="hasManyUfs ? 'display-ufs':'hidden'">
+    <span>
+      <ion-item id="item-consorcio" class="bg-color">
+        <ion-select cancelText="Cancelar" okText="Aceptar" [(ngModel)]="partnershipSelected" (ngModelChange)="selectingPartnership()" placeholder="Consorcio">
+          <ion-option class="" *ngFor="let item of partnershipsList" [value]="item.ConsorcioId">{{item.ConsorcioDescripcion}}</ion-option>
+        </ion-select>
+      </ion-item>
+    </span>
+
+    <span>
+      <ion-item class="bg-color">
+        <ion-select cancelText="Cancelar" okText="Aceptar" [ngClass]="partnershipSelected ? '':'hidden'" [(ngModel)]="ufSelected" placeholder="Unidad">
+          <ion-option *ngFor="let item of ufsActivesList" [value]="item.UnidadFuncionalId">{{item.UnidadFuncionalNombre}}</ion-option>
+        </ion-select>
+      </ion-item>
+    </span>
+  </div>
+
+
+  <!-- DIV DETALLE TICKET (MAIN) -->
+  <div [ngClass]="ufSelected ? 'detalle-ticket':'hidden'">
+
+    <!-- <div padding class="detalle">
+      <h5 class="margin-detalle">Detalle del ticket</h5>
+    </div> -->
+
+    <div class="container bg-white">
+      <!-- SELECT MOTIVO -->
+      <ion-item class="margin-motivo">
+        <ion-select cancelText="Cancelar" okText="Aceptar"[(ngModel)]="claimTypeSelected" [ngClass]="{'error': claimTypeSelectedHasError }" placeholder="Motivo" (ionChange)='claimTypeSelectedHasError = false'>
+          <ion-option *ngFor="let item of claimTypes" [value]="item.Codigo">{{item.Descripcion}}</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <!-- <div class="icon-error">
+        <ion-icon name="md-close-circle"></ion-icon>
+      </div> -->
+
+      <!-- CHECK AFECTA OTRA UNIDAD -->
+      <ion-item class="margin-unidad">
+        <ion-label>Afecta a otra unidad</ion-label>
+        <ion-checkbox color="dark" checked="true" [(ngModel)]="isOtherUFAffected"></ion-checkbox>
+      </ion-item>
+
+      <!-- SELECT UNIDAD AFECTADA -->
+      <ion-item id="select1">
+        <ion-select cancelText="Cancelar" okText="Aceptar" id="select2" [ngClass]="isOtherUFAffected ? '':'hidden'" [(ngModel)]="otherUfSelected" placeholder="Unidad Afectada">
+          <ion-option *ngFor="let item of ufsOthersList" [value]="item.Id">{{item.Descripcion}}</ion-option>
+        </ion-select>
+      </ion-item>
+    </div>
+
+
+    <!-- TEL CONTACTO -->
+    <div class="container">
+      <h5>Tel. Contacto</h5>
+      <ion-item class="margin-inputs bg-color">
+        <ion-input type="tel" [(ngModel)]="phone" [ngClass]="{'error': phoneHasError }" (ionChange)='phoneHasError = false' maxlength="12" placeholder="cod.area + tel"></ion-input>
+      </ion-item>
+    </div>
+
+
+
+    <!-- COMENTARIOS -->
+    <div class="comentarios" text-center>
+      <h5 class="margin-comentarios">Comentarios</h5>
+      <ion-item class="margin-comments bg-color">
+        <textarea class="bg-color" #myInput id="myInput" rows="1" maxLength="500" (keyup)="resize()" [(ngModel)]="comments" placeholder="Escriba aquí su comentario"></textarea>
+        <!-- <ion-textarea [(ngModel)]="comments" [ngClass]="{'error': commentsHasError }" (ionChange)='commentsHasError = false' placeholder="Escriba aquí su comentario"></ion-textarea> -->
+      </ion-item>
+
+    </div>
+
+
+
+  <!-- <hr> -->
+
+  <div class="preview-images">
+    <img *ngFor="let i of images" src="{{ i }}" alt="">
+  </div>
+
+  <!--  CAMERA BUTTON-->
+
+  <div *ngIf="notTaken; else taken">
+    <button ion-button class="btn-camera margin-comentarios" type="button" (click)='runCamera()'>
+      <div>
+        <ion-icon class="icon-camera"name="camera"></ion-icon><br>
+        <label>Tomar Foto</label><br>
+        <label> comprobante</label>
+      </div>
+    </button>
+
+     <button ion-button class="btn-camera margin-comentarios" type="button" (click)='openGallery()'>
+    <div>
+      <ion-icon class="icon-camera" name="md-images"></ion-icon><br>
+      <label>Buscar en la</label><br>
+      <label> Galeria</label>
+    </div>
+  </button>
+  </div>
+
+  <ng-template #taken>
+    <div class="index-{{ i }}" *ngFor="let v of images; let i=index">
+        <div class="progress-outer">
+          <div class="progress-inner"></div>
+        </div>
+        <!--  2 formas de hacer lo mismo: ngClass y *ngIf -->
+        <ion-icon [ngClass]="loaded[i] == true ? 'color size':'hidden'" name="checkmark"></ion-icon>
+        <ion-icon *ngIf="loaded[i]" class="size" (click)="removeItem(i)" name="ios-trash"></ion-icon>
+      </div>
+
+
+      <button ion-button icon-strat class="btn-camera2" (click)='runCamera()'>
+          <ion-icon class="icon-camera2" name="camera"></ion-icon>
+          Tomar otra imágen
+      </button>
+
+      <button ion-button icon-strat class="btn-camera2" (click)='openGallery()'>
+          <ion-icon class="icon-camera2" name="md-images"></ion-icon>
+          <label>Buscar en la Galeria</label>
+          <!-- <br> -->
+        <!-- <label> Galeria</label> -->
+      </button>
+  </ng-template>
+
+  <!-- FIN DIV PRINCIPAL -->
+  </div>
+
+  <!-- BUTTON GENERAR TICKET-->
+  <button ion-button full type="button" name="button" [ngClass]="ufSelected ? 'boton-footer':'hidden'" (click)='sendClaim()'>
+    <span class="text" text-uppercase>generar ticket</span>
+    <ion-icon class="arrow" name="ios-arrow-round-forward"></ion-icon>
+  </button>
+
+</ion-content>

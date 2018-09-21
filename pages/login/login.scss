@@ -1,0 +1,134 @@
+page-login {
+
+  .text-input {
+    font-weight: bold;
+    font-size: 90%;
+    margin-bottom: 0px;
+  }
+
+  .arrow {
+    font-size: 3rem;
+  }
+
+  .btn-back {
+    margin-left: -50%;
+    margin-top: 40%;
+  }
+
+  img {
+    max-width: 100%;
+    border: 0;
+    position: absolute;
+    right: 17px;
+    width: 10rem;
+  }
+
+  .margin {
+    margin-top: 20px;
+    margin-left: -16px;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+
+  .navbar {
+    display: -webkit-box;
+  }
+
+  // .main {
+  //   height: 100%;
+  // }
+
+  .container {
+    background-color: white;
+    height: 25%;
+    border-radius: 2%;
+  }
+
+  .margin-inputs{
+    // margin-top: 10px;
+    //margin-left: 0px;
+    height: 0px;
+    width: 95%;
+    margin-left: 2%;
+  }
+
+  .item-md {
+    background-color: transparent;
+  }
+
+  // i.material-icons.font{
+  //   font-size: 40px;
+  //   font-weight: italic;
+  // }
+
+ .item-md.item-block .item-inner {
+   border-bottom: 1px solid #d34798;
+  //  border-bottom-color: grey;
+   box-shadow: #d34798;
+ }
+
+ .item-inner {
+   border-bottom-color: grey;
+   box-shadow: grey;
+ }
+
+ .item-md.item-input.item-input-has-focus .item-inner, .item-md.item-input.input-has-focus .item-inner {
+   border-bottom-color: #d34798;
+   box-shadow: inset 0 -1px 0 0 #d34798;
+ }
+
+ .item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner{
+   border-bottom-color: #d34798;
+   box-shadow: inset 0 -1px 0 0 #d34798;
+ }
+
+  .boton-contraseña {
+    background-color: transparent!important;
+    color: 	#afafaf!important;
+    font-family: 'Open Sans', sans-serif;
+    box-shadow: none;
+    font-size: 85%;
+  }
+
+  .button-md.activated {
+    background-color: #742284;
+    box-shadow: none;
+  }
+
+  .button-md:hover:not {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  ion-icon.icon.icon-md.ion-ios-help-circle-outline {
+    font-weight: bold;
+  }
+
+  ion-icon {
+    font-size: 2.3rem;
+  }
+
+  // .input-cover {
+  //   position: static;
+  // }
+
+  // .item-md [item-left], .item-md [item-right], .item-md [item-start], .item-md [item-end] {
+  //   margin: 9px 0 9px 0;
+  //   width: 37px;
+  // }
+
+  .button-clear-md .button-effect {
+    background-color: transparent;
+  }
+
+  button {
+    background-color: transparent;
+  }
+
+  .button-block-md {
+    // margin-left: 0;
+    // margin-right: 0;
+    margin-top: 10%;
+  }
+
+}

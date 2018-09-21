@@ -1,0 +1,29 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <img src="assets/imgs/bg.jpg" class="imgPos">
+    <ion-title text-center class="text" text-capitalize>calendario</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <div class="bloque">
+    <div class="item">
+      <img class="phone-icon" src="{{'./assets/imgs/calendario/' + tipo + '.png'}}">
+      <h2 class="family">{{ titulo }}</h2>
+    </div>
+    <p class="family texto">{{ fecha }}. {{ hora }}</p>
+  </div>
+
+  <!-- <div class="texto"> -->
+    <h6 class="descripcion">{{ descripcion }}</h6>
+  <!-- </div> -->
+
+</ion-content>

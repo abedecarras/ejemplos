@@ -1,0 +1,40 @@
+<head>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+</head>
+
+<ion-content class="crear-background" padding>
+
+	<div class="main">
+		<div class="navbar">
+			<button class="btn-back"(click)="goBack()">
+				<ion-icon class="arrow white" name="md-arrow-back"></ion-icon>
+			</button>
+			<h4 class="text margin" text-uppercase>crear un usuario</h4>
+		  <img src="./assets/imgs/logo-veme.svg"/>
+		</div>
+
+		<div class="container">
+				<ion-item class="margin-inputs">
+					<ion-input class="text text-input" #username placeholder="EMAIL"></ion-input>
+				</ion-item>
+
+
+			<ion-item class="margin-inputs">
+			 	<ion-input type="{{type}}" name="password" class="text text-input" ngModel #password="ngModel" required pattern=".{4,10}" placeholder="CONTRASEÑA"></ion-input>
+				 <button *ngIf="!showPass" ion-button clear color="dark" type="button" item-right (click)="showPassword()">
+					 <ion-icon name="eye"></ion-icon>
+				 </button>
+				 <button *ngIf="showPass" ion-button clear color="dark" type="button" item-right (click)="showPassword()">
+					 <ion-icon name="eye-off"></ion-icon><!--style="font-size:2.3rem; font-weight:bold"-->
+				 </button>
+			</ion-item>
+		</div>
+
+	  <button ion-button large block class="text" (click)='login()'> <!--style="margin-top:10%;" -->
+	  		ingresar
+	  </button>
+	</div>
+
+
+</ion-content>

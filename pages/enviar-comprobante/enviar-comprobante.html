@@ -1,0 +1,175 @@
+
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+		<img src="assets/imgs/bg.jpg" class="imgPos">
+		<ion-title *ngIf="isAdmin;else ifNot" text-center class="text">Registrar Cobro</ion-title>
+
+    <ng-template #ifNot>
+      <ion-title text-center class="text">Informar Pago</ion-title>
+    </ng-template>
+  </ion-navbar>
+</ion-header>
+
+<!----------------------------------------------------------------------------->
+
+<ion-content>
+  <div [ngClass]="hasManyUfs ? 'display-ufs':'hidden'">
+    <span>
+      <ion-item>
+        <ion-select cancelText="Cancelar" okText="Aceptar" class="icon-select" [(ngModel)]="partnershipSelected" (ngModelChange)="selectingPartnership()" placeholder="Consorcio">
+          <ion-option *ngFor="let item of partnershipsList" [value]="item.ConsorcioId">{{item.ConsorcioDescripcion}}</ion-option>
+        </ion-select>
+      </ion-item>
+    </span>
+
+    <span>
+      <ion-item id="item2">
+        <ion-select cancelText="Cancelar" okText="Aceptar" class="icon-select" [ngClass]="partnershipSelected ? '':'hidden'" [(ngModel)]="ufSelected" (ngModelChange)="selectingUF()" placeholder="Unidad">
+          <ion-option *ngFor="let item of ufsActivesList" [value]="item.UnidadFuncionalId">{{item.UnidadFuncionalNombre}}</ion-option>
+        </ion-select>
+      </ion-item>
+    </span>
+  </div>
+
+  <!-- DIV SALDO-->
+  <div [ngClass]="ufSelected ? 'saldo':'hidden'">
+    <div padding class="saldo-style">
+      <h4 ngController="balanceDate">Saldo al {{balanceDate}}</h4>
+      <h6 ngController="balanceCash">${{balanceCash | europeFormat }}</h6>
+    </div>
+  </div>
+  <!-- DIV MAIN -->
+  <div [ngClass]="ufSelected ? 'detalle':'hidden'">
+
+    <h4>Detalle del pago</h4>
+
+    <div class="posicion">
+      <!-- DATEPICKER -->
+      <ion-item class="date">
+        <ion-datetime [ngClass]="{'error': paymentMethodSelectedHasError }" (ionChange)='paymentMethodSelectedHasError = false' class="date-style" doneText="aceptar" cancelText="cancelar" item-left displayFormat="DD/MM/YYYY" placeholder="Ingrese Fecha" [(ngModel)]="paymentDate"></ion-datetime>
+        <ion-label><ion-icon class="calendar" icon-end ios="ios-calendar" md="md-calendar"></ion-icon></ion-label>
+      </ion-item>
+
+      <!-- SELECT FORMAS DE PAGO -->
+        <ion-item class="formas">
+          <ion-select cancelText="Cancelar" okText="Aceptar" class="icon-select" [(ngModel)]="paymentMethodSelected" [ngClass]="{'error': paymentMethodSelectedHasError }" (ionChange)='paymentMethodSelectedHasError = false' placeholder="Formas de Pago">
+            <ion-option *ngFor="let item of paymentMethods" [value]="item.Id">{{item.Descripcion}}</ion-option>
+          </ion-select>
+        </ion-item>
+    </div>
+
+
+    <hr *ngIf="!isAdmin">
+
+    <!-- INPUT COMPROBANTE-->
+    <div *ngIf="!isAdmin" class="marginTop">
+      Coloque aquí su numero de comprobante
+    	<ion-item class="margin-inputs">
+    		<ion-input type="number" [(ngModel)]="paymentVoucher" placeholder="N° XXXX"></ion-input>
+    	</ion-item>
+    </div>
+
+    <!-- CHECKBOX ENVIAR COMPROBANTE-->
+    <div class="center" *ngIf="isAdmin">
+      <!-- <ion-item> -->
+        <ion-checkbox color="dark" checked="true" [(ngModel)]="paymentSendVoucher"></ion-checkbox>
+        <ion-label>Enviar comprobante</ion-label>
+
+      <!-- </ion-item> -->
+    </div>
+
+
+    <hr>
+
+    <!-- INPUT MONTO -->
+    <div class="marginTop">
+      Coloque aquí el monto abonado
+    	<ion-item class="margin-inputs">
+    		<ion-input class="text-input" type="number" [(ngModel)]="paymentCash" [ngClass]="{'error': paymentCashHasError }" (ionChange)='paymentCashHasError = false' placeholder="$ XXXX"></ion-input>
+        <!-- <p>{{paymentCash | europeFormat}}</p> -->
+    	</ion-item>
+      <!-- <p>{{paymentCash | europeFormat}}</p> -->
+    </div>
+
+    <hr>
+
+    <!-- COMENTARIOS -->
+    <!-- <h5 class="marginTop">Comentarios:</h5>
+    <ion-item class="margin-comments">
+      <textarea #myInput id="myInput" rows="1" maxLength="500" (keyup)="resize()" [(ngModel)]="paymentComments" placeholder="Escriba aquí su comentario"></textarea> -->
+      <!-- <ion-textarea [(ngModel)]="paymentComments" placeholder="Escriba aquí su comentario"></ion-textarea> -->
+    <!-- </ion-item> -->
+
+    <div *ngIf="!isAdmin" class="">
+      Comentarios:
+      <ion-item class="margin-comments">
+        <textarea #myInput id="myInput" rows="1" maxLength="500" (keyup)="resize()" [(ngModel)]="paymentComments" placeholder="Escriba aquí su comentario"></textarea>
+        <!-- <ion-textarea [(ngModel)]="paymentComments" placeholder="Escriba aquí su comentario"></ion-textarea> -->
+      </ion-item>
+    </div>
+
+    <hr *ngIf="!isAdmin">
+
+
+  <div class="preview-images">
+      <img *ngFor="let v of vouchers" src="{{ v }}" alt="">
+    </div>
+
+    <!--  CAMERA BUTTON-->
+
+
+    <div *ngIf="notTaken; else taken">
+      <button ion-button class="btn-camera" type="button" (click)='runCamera()'>
+        <div class="">
+          <ion-icon class="icon-camera"name="camera"></ion-icon><br>
+          <label>Tomar Foto</label><br>
+          <label> comprobante</label>
+        </div>
+      </button>
+
+      <button ion-button class="btn-camera" type="button" (click)='openGallery()'>
+        <div>
+          <ion-icon class="icon-camera" name="md-images"></ion-icon><br>
+          <label>Buscar en la</label><br>
+          <label> Galeria</label>
+        </div>
+      </button>
+    </div>
+
+    <ng-template #taken>
+      <!-- <ion-datetime displayFormat="MM/DD/YYYY"></ion-datetime> -->
+
+      <div class="index-{{ i }}" *ngFor="let v of vouchers; let i=index">
+        <div class="progress-outer">
+          <div class="progress-inner"></div>
+        </div>
+        <!--  2 formas de hacer lo mismo: ngClass y *ngIf -->
+        <ion-icon [ngClass]="loaded[i] == true ? 'color size':'hidden'" name="checkmark"></ion-icon>
+        <ion-icon *ngIf="loaded[i]" class="size" (click)="removeItem(i)" name="ios-trash"></ion-icon>
+      </div>
+
+
+      <button ion-button icon-strat class="btn-camera2" (click)='runCamera()'>
+          <ion-icon class="icon-camera2" name="camera"></ion-icon>
+          Tomar otra imágen
+      </button>
+
+      <button ion-button icon-strat class="btn-camera2" (click)='openGallery()'>
+          <ion-icon class="icon-camera2" name="camera"></ion-icon>
+          <label>Buscar en la</label><br>
+        <label> Galeria</label>
+      </button>
+    </ng-template>
+
+    <!-- BUTTON INFORMAR PAGO-->
+    <button ion-button full [ngClass]="ufSelected ? 'boton-footer':'hidden'" type="button" name="button" (click)='sendPayment()'>
+      <span class="text">Informar Pago</span>
+      <ion-icon class="arrow" name="ios-arrow-round-forward"></ion-icon>
+    </button>
+  <!-- FIN DIV PRINCIPAL -->
+  </div>
+
+</ion-content>

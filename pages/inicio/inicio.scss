@@ -1,0 +1,93 @@
+page-inicio {
+
+  img.center {
+    width: 70%;
+  }
+
+  .center {
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .btn-facebook {
+    background-color: #004892;
+    margin-top: 30%;
+  }
+
+  .button-md.activated {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .button-md:hover:not {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .btn-large {
+    font-size: 1.3rem;
+    width: 100%;
+    border-radius: 3%;
+  }
+
+  #boton-crear {
+    margin-top: -3%;
+  }
+
+  // button.btn-large.text.disable-hover.button.button-md.button-default.button-default-md.button-large.button-large-md.button-md-light {
+  //   margin-top: 3%;
+  // }
+
+  h6 {
+    color: white;
+    align-self: center;
+    margin-bottom: 7%;
+    font-weight: 400;
+  }
+
+  hr {
+    background-color: white!important;
+    width: 20%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  .break {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .line {
+    align-self: center;
+  }
+
+  .crear-icon {
+    width: 5rem;
+    margin-left: -10%;
+    padding-right: 8%;
+  }
+
+  .parrafo {
+    font-size: 0.7rem;
+    text-align: center;
+    width: 118%;
+    margin-left: -8%;
+  }
+
+  #parrafo1 {
+    margin-top: 15%;
+  }
+
+  mark {
+    background-color: inherit;
+    color: blue;
+  }
+
+  .margin-top {
+    margin-top: 2%;
+  }
+
+}

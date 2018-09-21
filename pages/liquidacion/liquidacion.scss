@@ -1,0 +1,108 @@
+page-liquidacion {
+
+  ion-header.header.header-md {
+    top: 7%;
+  }
+
+  button.bar-buttons.bar-buttons-md.bar-button.bar-button-md.bar-button-default.bar-button-default-md.bar-button-menutoggle.bar-button-menutoggle-md {
+    color: white;
+  }
+
+  ion-title.text.title.title-md {
+    margin-top: -36%;
+    margin-left: -10%;
+    width: 100%;
+  }
+
+  // Navbar Style
+
+  .toolbar-title-md {
+    color: white;
+  }
+
+  button.back-button.bar-button.bar-button-md.back-button-md.bar-button-default.bar-button-default-md.show-back-button {
+    color: white;
+  }
+
+  .scroll-content {
+    margin-top: 36% !important;
+  }
+
+  ion-navbar.toolbar.toolbar-md {
+    height: 130px;
+    margin-top: -50px;
+  }
+
+  .imgPos {
+    max-width: 135%;
+    margin-left: -30%;
+    margin-top: -15%;
+  }
+
+  //fin Navbar
+
+
+
+  .list-md .item-block .item-inner {
+    border-bottom: none;
+  }
+
+  .list-input {
+    background-color: transparent;
+    color:#424242;
+    border-bottom: 1px solid black;
+  }
+
+  .input-wrapper {
+    font-size: 85%;
+  }
+
+  .saldo-style {
+    // margin-left: -9%;
+    height: 25%;
+    background-color: color($colors, primary, base);
+    color: color($colors, light, base);
+  }
+
+
+  .boton {
+    margin-top: 5%;
+    margin-left: 13%;
+    background-color: transparent;
+    color:#424242;
+    width: 80%;
+  }
+
+  ion-icon {
+    padding-right: 4%;
+  }
+
+  .email {
+    color: red;
+    border-color: red;
+  }
+
+  .descargar {
+    color: blue;
+    border-color: blue;
+  }
+
+  .whatsapp {
+    color: green;
+    border-color: green;
+  }
+
+  .boton-add {
+    background-color: #D900C1;
+    color:#323232;
+    font-size: 17px;
+    height: 65px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .button-md.activated {
+    background-color:  #D900C1;
+    box-shadow: none;
+  }
+}

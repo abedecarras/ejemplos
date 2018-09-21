@@ -1,0 +1,73 @@
+
+<ion-header class="navbar-height">
+  <ion-navbar class="navbar-height">
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <div class="imgs-container">
+      <img src="./assets/imgs/logo-veme.png" class="logo-veme">
+    </div>
+    <img src="./assets/icon/iso-logo.svg" class="img-nav-bar">
+    <!-- <ion-title text-right class="title-menu">INICIO</ion-title> -->
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <div class="top-container">
+      <div class="avtr">
+        <img src="{{ avatarURL }}" alt="">
+      </div>
+
+      <!-- div for show notifications -->
+      <div *ngIf="news[0] !== undefined" [ngClass]="{'facebook': news[0].tipo == 'facebook', 'notificacion': news[0].tipo == 'single' || news[0].tipo =='multiple'}" class="notificacion family" text-wrap (click)="goNews()">
+        <ion-icon *ngIf="news[0].tipo == 'single'" name="ios-alert-outline"></ion-icon>
+        <div class="face">
+          <ion-icon *ngIf="news[0].tipo == 'facebook'" class="face-icon" name="logo-facebook"></ion-icon>
+        </div>
+        <ion-icon *ngIf="news[0].tipo == 'facebook'" class="size" name="share"></ion-icon>
+        <ion-icon *ngIf="news[0].tipo == 'multiple'" name="ios-notifications-outline"></ion-icon>
+        <label class="family">{{ news[0].titulo }}</label>
+        <button ion-button (click)="close()">
+          <ion-icon name="md-close"></ion-icon>
+        </button>
+      </div>
+
+      <div class="emoji">
+        <button class="mood-button" type="button" name="button" (click)="showMood()">
+        	<img src="./assets/imgs/emoji.png" alt="">
+        </button>
+      </div>
+
+      <!-- div default for welcome message -->
+      <div *ngIf="news[0] === undefined" class="notificacion family" text-wrap>
+        <label class="family">Bienvenido a VeME <br> más que una simple solución</label>
+      </div>
+      <div class="emoji">
+        <button class="mood-button" type="button" name="button" (click)="showMood()">
+        	<img src="./assets/imgs/emoji.png" alt="">
+        </button>
+      </div>
+    </div>
+    <!----------------------------------------------------------------------------->
+    <div class="container">
+        <button class="boton" ion-button large outline *ngFor="let p of pages; let i = index" (click)="openPage(p)" text-uppercase>
+            <img class="img-button" src="{{'./assets/imgs/' + i + '.jpg'}}">
+            <img  class="icon-btn" src="{{'./assets/icon/' + p.title + '.png'}}">
+            <div class="center-text" text-wrap>{{p.title}}</div>
+        </button>
+    </div>
+
+</ion-content>
+
+<!-- BOTON DE PANICO -->
+<ion-footer>
+  <div id="CSStransforms" class="footer">
+    <div class="el round-button">
+      <button ion-button round icon-only class="btn"(click)="popup()" (touchstart)="panicButtonStart($event)" (touchend)="panicButtonEnd()">
+        <ion-icon name="ios-alert-outline"></ion-icon>
+      </button>
+      <h6 id="h6">BOTÓN DE PÁNICO</h6>
+    </div>
+  </div>
+</ion-footer>

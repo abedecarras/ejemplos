@@ -1,0 +1,41 @@
+page-oportunidades {
+
+  ion-header.header.header-md {
+    top: 7%;
+  }
+
+  button.bar-buttons.bar-buttons-md.bar-button.bar-button-md.bar-button-default.bar-button-default-md.bar-button-menutoggle.bar-button-menutoggle-md {
+    color: white;
+  }
+
+  ion-title.text.title.title-md {
+    margin-top: -36%;
+    width: 100%;
+  }
+
+  .toolbar-title-md {
+    color: white;
+  }
+
+  button.back-button.bar-button.bar-button-md.back-button-md.bar-button-default.bar-button-default-md.show-back-button {
+    color: white;
+  }
+
+  .scroll-content {
+    margin-top: 33% !important;
+  }
+
+  ion-navbar.toolbar.toolbar-md {
+    height: 130px;
+    margin-top: -50px;
+  }
+
+  .imgPos {
+    max-width: 135%;
+    margin-left: -30%;
+    margin-top: -15%;
+  }
+
+
+
+}

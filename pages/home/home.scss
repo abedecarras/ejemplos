@@ -1,0 +1,254 @@
+page-home {
+
+  ion-navbar.navbar-height.toolbar.toolbar-md {
+    margin-top: 0px;
+  }
+
+  ion-content.content.content-md {
+    background-color: rgb(233, 230, 232);
+  }
+
+  .toolbar-content.toolbar-content-md {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .imgs-container {
+    width: 65%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbar-height {
+    height: 60px!important;
+  }
+
+  .img-nav-bar {
+    width: 50px;
+  }
+
+  .logo-veme {
+    width: 100px;
+    height: 50px;
+    margin-left: 20%;
+  }
+
+  .scroll-content {
+    margin-top: 67px;
+  }
+
+  .top-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .avtr {
+    float: left;
+    background-color: #ffffff;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    position: absolute;
+    left: 33px;
+    overflow: hidden;
+    top:19px;
+  }
+
+  .hidden {
+    visibility: hidden;
+  }
+
+  .notificacion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 58%;
+    margin-left: 5%;
+    text-align: center;
+    background-color: #ff9000;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 4px 3px 4px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  }
+
+  .facebook {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 58%;
+    margin-left: 5%;
+    text-align: center;
+    background-color: #2232aa;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 4px 3px 4px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  }
+
+  label.family {
+    margin-bottom: 4px;
+    margin-top: 4px;
+  }
+
+  ion-icon.face-icon.icon.icon-md.ion-logo-facebook {
+    color: #2232aa!important;
+    background-color: #fff!important;
+    position: relative;
+    top: -6px;
+    font-size: 3.3rem;
+  }
+
+  .face {
+    overflow: hidden;
+    width: 37px;
+    height: 22px;
+  }
+
+  .size {
+    font-size: 1.8em!important;
+  }
+
+  .notificacion button, .facebook button  {
+    background-color: transparent;
+    box-shadow: none;
+    top: -12px;
+    left: 8px;
+    ion-icon {
+      font-size: 1em;
+      margin-left: 4px;
+    }
+  }
+
+  .notificacion.family, .facebook.family {
+    font-size: 1.2rem;
+  }
+
+  .emoji {
+    float: right;
+  }
+
+  .mood-button {
+    display: block;
+    // margin-left: 2%;
+    // margin-top: -6%;
+    border-radius: 50%;
+    background-color: transparent;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    right: 20px;
+  }
+
+  .container {
+    margin-left: 4%;
+    // margin-right: 21%;
+    margin-top: 7%;
+    margin-bottom: 0%;
+    height: 100%;
+  }
+
+  .boton {
+    // max-width: 46%;
+    // // min-width: 46%;
+    // min-height: 30%;
+    // // max-height: 30%;
+    width: 45%;
+    height: 25%;
+    font-size: 75%;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    // letter-spacing: 1.5px;
+    border: 0px;
+    margin-left: 3%;
+    // padding: 0;
+    // margin-left: 2%;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 4px 3px 4px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  }
+
+  .img-button {
+    // margin-left: 50%;
+    margin-top: 4%;
+    max-width: 120%;
+  }
+
+  .icon-btn {
+    width: 40%;
+    position: absolute;
+    // height: 50px;
+    // width: 50px;
+    left: 50%;
+    top: 50%;
+    margin-top: -30%;
+    margin-left: -20%;
+  }
+
+  .center-text {
+    position: absolute;
+    top: 67%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    // font-size: 14px;
+    // color: white;
+  }
+
+  .round-button {
+    display: flex!important;
+    justify-content: center;
+    background-color: white;
+    display:block;
+    height: 250%;
+    width: 25%;
+    border-radius: 50%;
+    // border: 1px solid red;
+    // margin-left: 38%;
+    margin-top: -5%;
+  }
+
+  .btn {
+    position: absolute;
+    background-color: #D11A0F;
+    // left: 10px;
+    // margin-left: 6%;
+    // display:block;
+    margin-left: 0%;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    // top: -5%;
+  }
+
+  .button-md.activated,
+  .button-md:hover:not(.disable-hover) {
+    background-color: #D11A0F;
+  }
+
+  [icon-only] ion-icon {
+    font-size: 2.8em;
+  }
+
+  ion-icon {
+    font-size: 2.5em;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    position:fixed;
+    bottom:0;
+    height:10%;
+    width: 100%;
+    background-color: white;
+  }
+
+  #h6 {
+    position: absolute;
+    font-size: 0.9rem;
+    top: 40%;
+    // margin-left: 2%;
+  }
+
+}

@@ -1,0 +1,344 @@
+page-nuevo-ticket {
+
+    div {
+      h1 {
+        font-weight: bold;
+      }
+    }
+
+    .pedidos {
+      background-color: color($colors, primary, base);
+      height: 15%;
+      color: color($colors, light, base);
+      text-align: center;
+    }
+
+    div p {
+      font-size: 2rem;
+      padding-top: 7%;
+    }
+
+    .fila-titulos {
+      background-color:	#F003CF;
+      color: color($colors, primary, contrast);
+      border-bottom: 1px solid black;
+      border-top:  1px solid black;
+    }
+
+    .item-md {
+      padding-left: 0px!important;
+    }
+
+    button.item.item-block.item-md {
+      border-bottom: 1px solid #8c8c8c;
+    }
+
+    .boton {
+      height: 50px;
+      width: 195px;
+      letter-spacing: 1px;
+      font-family: 'Open Sans', sans-serif;
+      margin-top: 15%;
+    }
+
+    .fila-titulos ion-col {
+      font-weight: bold;
+      font-size: 2rem;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // Navbar Style
+
+    ion-header.header.header-md {
+      top: 7%;
+    }
+
+    ion-title.text.title.title-md {
+      margin-top: -36%;
+      width: 100%;
+    }
+
+    .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+      color: white;
+    }
+
+    .toolbar-title-md {
+      color: white;
+    }
+
+    button.back-button.bar-button.bar-button-md.back-button-md.bar-button-default.bar-button-default-md.show-back-button {
+      color: white;
+    }
+
+    .scroll-content {
+      margin-top: 33% !important;
+    }
+
+    ion-navbar.toolbar.toolbar-md {
+      height: 130px;
+      margin-top: -50px;
+    }
+
+    .imgPos {
+      max-width: 135%;
+      margin-left: -30%;
+      margin-top: -15%;
+    }
+
+    //end NavBar
+
+    ion-spinner * {
+      margin-left: 160%;
+      margin-top: 70%;
+      width: 28px;
+      height: 28px;
+      stroke: #444;
+      fill: #222;
+    }
+
+    ion-select {
+      max-width: 100%;
+    }
+
+    .item-md {
+      width: 100%;
+      padding-left: 15px;
+      padding-right: 0px;
+    }
+
+    .display-ufs {
+      width: 100%;
+      margin-left: 25%;
+      margin-top: 10%;
+      // display: block;
+    }
+
+    .posicion {
+      display: inline-flex;
+      width: 100%;
+    }
+
+    .select-style {
+      padding-left: 0%!important;
+    }
+
+    .select-arrow.select-md .select-icon .select-icon-inner {
+      left: 0px;
+    }
+
+    #item-consorcio.select-style {
+      margin-left: -7%;
+    }
+
+    page-menu .input-wrapper {
+      padding-left: 8px;
+    }
+
+    #item1.item-md {
+      margin-left: -12%;
+      padding-left: 0px;
+    }
+
+    #item1 div .input-wrapper{
+      padding-left: 0px;
+    }
+
+    #item2.select-md {
+      padding: 13px 8px 13px 4px;
+    }
+
+    .select-style .select-text {
+      margin-left: 0%;
+      letter-spacing: 1px;
+      font-size: 11px;
+    }
+
+    .option-style {
+      // margin-left: -10%;
+      text-transform: capitalize;
+      letter-spacing: 1px !important;
+    }
+
+    .detalle-ticket {
+      // margin-left: 40px;
+      text-align: center;
+    }
+
+    .detalle { //del ticket
+      margin-left: -9%;
+      height: 55%;
+      background-color: color($colors, primary, base);
+      color: color($colors, light, base);
+      // text-align: center;
+    }
+
+    .item-md.item-block .item-inner {
+      border-bottom: none;
+    }
+
+    //UNIDAD AFECTADA STYLE
+    #select1.item-md{
+      margin-left: 0%;
+      padding-left: 0%;
+
+    }
+
+    #select2.select-md {
+      margin-left: 28%;
+    }
+
+    #select1 .item-inner {
+      padding-right: 0%!important;
+    }
+
+    #select1 .input-wrapper {
+      padding-left: 0% !important;
+    }
+    //---------------------------------------------//
+    .margin-inputs {
+      margin-left: 25%;
+      border-bottom: solid 1px;
+      width: 50%;
+      padding-left: 0px;
+    }
+
+    .margin-detalle {
+      margin-left: 18%;
+    }
+
+    .margin-motivo {
+      margin-left: 30%;
+    }
+
+    .margin-unidad {
+      margin-left: 10%;
+    }
+
+    .margin-comentarios {
+      margin-top: 10%;
+    }
+
+    .margin-comments {
+      margin-left: 10%;
+      border-bottom: solid 1px;
+      width: 80%;
+      padding-left: 0px;
+    }
+
+    //color placeholder
+    .text-input::-webkit-input-placeholder {
+      text-indent: 0;
+      color: #999;
+    }
+
+    .text-input-md {  //placeholder
+      text-align: center;
+      padding: 0;
+      width: calc(100% - 8px - 8px);
+    }
+
+    .arrow {
+      font-size:225%;
+      padding-left:2%;
+    }
+
+    //click button hover
+    .button-md:hover:not(.disable-hover) {
+      background-color: color($colors, secondary, base);
+    }
+
+    .hidden {
+      // display: none;
+      visibility: hidden;
+    }
+
+    .icon-camera {
+      font-size: 3.6rem;
+    }
+
+    .btn-camera {
+      color: map-get($colors, secondary);
+      background-color: #dedede;
+      height: 6.6rem ;
+      width: 10.2rem;
+    }
+
+    .color{
+      color: map-get($colors, danger);
+    }
+
+    .size {
+      font-size: 3rem;
+    }
+
+    ion-icon.size.icon.icon-md.ion-ios-trash {
+      margin-left: 5%;
+    }
+
+    .icon-camera2 {
+      padding-right: 10%;
+      font-size: 2.5rem;
+      margin-left: 5%;
+    }
+
+    .btn-camera2 {
+      color: map-get($colors, secondary);
+      background-color: transparent;
+      height: 6.6rem ;
+      width: 55%;
+      display: block;
+      // margin-top: 1%;
+      margin-left: 15%;
+      box-shadow: none;
+      font-size: 1.2rem;
+    }
+
+    .progress-outer {
+      width: 60%;
+      height: 5px;
+      margin-left: 5%;
+      display: inline-flex;
+    }
+
+    .progress-inner {
+      min-width: 0%;
+      max-width: 100%;
+      height: 5px;
+      white-space: nowrap;
+      overflow: hidden;
+      background-color: map-get($colors, primary);
+      width: 0%;
+    }
+
+    button.button.button-md.button-default.button-default-md.button-full.button-full-md.boton-footer {
+      margin-top: 8%;
+    }
+
+
+
+
+
+}

@@ -1,0 +1,116 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <img src="assets/imgs/bg.jpg" class="imgPos">
+    <ion-title text-center class="text" text-wrap>Mis Reservas</ion-title>
+
+    <!-- <ion-buttons end>
+      <button ion-button (click)="goBack()">
+        <ion-icon name="md-close"></ion-icon>
+      </button>
+    </ion-buttons> -->
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <ion-fab bottom right>
+    <button ion-fab (click)="goHome()">
+      <ion-icon name="ios-home"></ion-icon>
+    </button>
+  </ion-fab>
+
+  <div class="text padding" text-capitalize text-center>
+
+    <!-- <button class="arrow" (click)="changeMonth('down')"><ion-icon name="ios-arrow-back" item-end class="grey"></ion-icon></button> -->
+    <!-- <h3>{{month}}</h3> -->
+    <!-- <button class="arrow" (click)="changeMonth('up')"><ion-icon name="ios-arrow-forward" item-end class="grey"></ion-icon></button> -->
+    <button ion-button class="text transparent" (click)="changeMonth('down')">
+      <ion-icon name="ios-arrow-back" item-start class="grey"></ion-icon>
+    </button>
+    <h3>{{month}}</h3>
+    <button ion-button class="text transparent" (click)="changeMonth('up')">
+      <ion-icon name="ios-arrow-forward" item-start class="grey"></ion-icon>
+    </button>
+
+  </div>
+
+  <!-- <div class="fila-titulos">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-3 col-sm>
+          Unidad
+        </ion-col>
+        <ion-col col-3 col-sm>
+          Fecha
+        </ion-col>
+        <ion-col col-3 col-sm>
+          Tipo
+        </ion-col>
+        <ion-col col-3 col-sm>
+          Estado
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div> -->
+
+
+  <ion-list *ngIf="!show; else showMore">
+    <button ion-item *ngFor="let p of reservas | slice:0:5" (click)="goVerReserva(p)">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-4 col-sm>
+            <span class="small dark-grey">{{p.fecha}}</span>
+          </ion-col>
+          <ion-col col-2 col-sm style="margin-left:-5%">
+            <span class="small mid-grey">{{p.amenity}}</span>
+          </ion-col>
+          <ion-col class="col3" col-3 col-sm style="margin-left:9%">
+            <span class="small light-grey">{{p.tipo}}</span>
+          </ion-col>
+          <ion-col col-3 col-sm text-center style="margin-left:-4%">
+            <div text-center class="small state" [ngClass]="{'green-border': p.estado =='ACEPTADO', 'violet-border': p.estado =='PENDIENTE',  'red-border': p.estado =='RECHAZADO'}">{{p.estado}}</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-icon name="ios-arrow-forward" item-right class="grey"></ion-icon>
+    </button>
+    <div text-center>
+      <button *ngIf="botonVerMas" class="boton-ver-mas" ion-button round text-uppercase (click)="changeText()">{{btn_txt}}</button>
+    </div>
+  </ion-list>
+
+  <ng-template #showMore>
+    <ion-list>
+      <button ion-item *ngFor="let p of pedidos" (click)="goVerTicket(p)">
+        <ion-grid>
+          <ion-row>
+            <ion-col col-4 col-sm>
+              <span class="small">{{p.unidad}}</span>
+            </ion-col>
+            <ion-col col-2 col-sm style="margin-left:-5%">
+              <span class="small">{{p.fecha}}</span>
+            </ion-col>
+            <ion-col class="col3" col-3 col-sm style="margin-left:9%">
+              <span class="small">{{p.tipo}}</span>
+            </ion-col>
+            <ion-col col-3 col-sm text-center  style="margin-left:-4%">
+              <span class="small state" [ngClass]="{'green-border': p.estado =='FINALIZADO', 'yellow-border': p.estado =='PENDIENTE', 'grey-border': p.estado =='LEIDO', 'violet-border': p.estado =='ENPROCESO', 'red-border': p.estado =='CANCELADO' || p.estado =='RECHAZADO'}">{{p.estado}}</span>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <ion-icon name="ios-arrow-forward" item-right class="grey"></ion-icon>
+      </button>
+      <div text-center>
+        <button *ngIf="botonVerMas" class="boton-ver-mas" ion-button round text-uppercase (click)="changeText()">{{btn_txt}}</button>
+      </div>
+    </ion-list>
+  </ng-template>
+
+</ion-content>

@@ -1,0 +1,174 @@
+page-registrar-consorcio {
+
+  // Navbar Style
+
+  .toolbar-title-md {
+    color: white;
+  }
+
+  button.back-button.bar-button.bar-button-md.back-button-md.bar-button-default.bar-button-default-md.show-back-button {
+    color: white;
+  }
+
+  .scroll-content {
+    margin-top: 33% !important;
+  }
+
+  ion-navbar.toolbar.toolbar-md {
+    height: 130px;
+    margin-top: -15%;
+  }
+
+  ion-title.text.title.title-md {
+    margin-top: -36%;
+    width: 100%;
+  }
+
+  .imgPos {
+    max-width: 135%;
+    margin-left: -30%;
+    margin-top: -15%;
+  }
+
+  //end NavBar
+
+  .fixed-content {
+    margin-top: 0%;
+    // margin-bottom: 0px;
+  }
+
+  ion-select {
+    max-width: 100%;
+  }
+
+  .item-md {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 0px;
+  }
+
+  .posicion {
+    display: inline-flex;
+    width: 100%;
+    //margin-top: 0%;
+  }
+
+  .saldo {
+    margin-left: 40px;
+    text-align: center;
+  }
+
+  .saldo-style {
+    margin-left: -9%;
+    height: 25%;
+    background-color: color($colors, primary, base);
+    color: color($colors, light, base);
+    // text-align: center;
+  }
+
+  .saldo-inner {
+    position: absolute;
+    margin-left: 30%;
+  }
+
+  .detalle {
+    margin-left: 40px;
+    text-align: center;
+  }
+
+  .item-md.item-block .item-inner {
+    border-bottom: none;
+  }
+
+  .calendar {
+    font-size:2em;
+    color: color($colors, secondary, base); //#232222;
+    border-bottom: none;
+  }
+
+  .margin-inputs {
+    margin-left: 25%;
+    border-bottom: solid 1px;
+    width: 50%;
+    padding-left: 0px;
+  }
+
+  .text-input::-moz-placeholder {
+    color: grey;
+  }
+
+  .text-input:-ms-input-placeholder {
+    color: white;
+  }
+
+  //COLOR PLACEHOLDER
+  .text-input::-webkit-input-placeholder {
+    text-indent: 0;
+    color: #999;
+  }
+
+  .text-input {
+    // color: grey;
+  }
+
+  // TOGGLE BUTTON
+  .item-md .toggle-md {
+    padding: 12px 8px 12px 0px;
+    padding-bottom: 22px;
+    padding-right: 12px;
+  }
+
+  ion-toggle {
+    zoom: 1.5;
+  }
+
+  // CHECKED
+  .toggle-md.toggle-checked .toggle-icon {
+    background-color: #9e9d9d;
+    height: 29px;
+    width: 43px;
+  }
+  .toggle-md.toggle-checked .toggle-inner {
+    top: 2;
+    width: 25px;
+    height: 25px;
+    background-color: #ffffff;
+  }
+  // UNCHECKED
+  .toggle-md .toggle-icon{
+    background-color: #00B800;
+    width: 43px;
+    height: 29px;
+  }
+
+  .toggle-md .toggle-inner {
+    top: 2px;
+    left: 1px;
+    width: 25px;
+    height: 25px;
+  }
+
+
+  .label-style{
+    margin-left: 35px;
+  }
+
+  .button-md:hover:not(.disable-hover) {
+    background-color: color($colors, secondary, base);
+  }
+
+  .item-md.item-input.item-input-has-focus .item-inner, .item-md.item-input.input-has-focus .item-inner {
+    border-bottom-color: #d34798;
+    box-shadow: inset 0 -1px 0 0 #d34798;
+  }
+
+  .arrow {
+    font-size:225%;
+    padding-left:2%;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+}

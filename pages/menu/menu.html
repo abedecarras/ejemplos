@@ -1,0 +1,28 @@
+
+
+<ion-menu [content]="content">
+  <ion-header class="navbar-height">
+    <ion-toolbar class="navbar-height">
+      <div class="avt">
+          <img src="{{avatarURL}}">
+      </div>
+			<ion-title ngController="userName" class="text">{{userName}}</ion-title>
+			<img width="20%" src="./assets/icon/iso-logo.svg" class="img-menu-position" >
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content id="menu">
+    <ion-list>
+       <button ion-item menuClose *ngFor="let p of pages" (click)="openPage(p)" text-uppercase>
+         <img class="img-list" src="{{'./assets/imgs/iconosSideMenu/' + p.title + '.png'}}" alt="">
+        {{p.title}}
+      </button>
+			<button ion-item menuClose (click)="logOut()"text-uppercase>
+        <img class="img-list" src="./assets/imgs/iconosSideMenu/salir.png" alt="">
+        salir
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

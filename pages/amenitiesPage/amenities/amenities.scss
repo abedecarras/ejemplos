@@ -1,0 +1,225 @@
+page-amenities {
+
+  ion-header {
+    top: 7%;
+  }
+
+  ion-title.text.title.title-md {
+    margin-top: -36%;
+    margin-left: -10%;
+    width: 100%;
+  }
+
+  // Navbar Style
+
+  .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+    color: white;
+  }
+
+  .toolbar-title-md {
+    color: white;
+  }
+
+  .toolbar-title {
+   text-overflow: inherit;
+   white-space: normal;
+  }
+
+  button.back-button.bar-button.bar-button-md.back-button-md.bar-button-default.bar-button-default-md.show-back-button {
+    color: white;
+  }
+
+  .scroll-content {
+    margin-top: 36% !important;
+  }
+
+  ion-navbar.toolbar.toolbar-md {
+    height: 130px;
+    margin-top: -50px;
+  }
+
+  .imgPos {
+    max-width: 135%;
+    margin-left: -30%;
+    margin-top: -15%;
+  }
+
+  //end NavBar
+
+
+
+  .margin-inputs{
+    margin-top: 10px;
+    margin-left: 30px;
+    width: 85%;
+    padding-left: 0px;
+  }
+
+  .list-md .item-block .item-inner {
+    border-bottom: none;
+    margin-left: -30px;
+  }
+
+  .list-button {
+    background-color: transparent;
+    // color:#424242;
+    border-bottom: 0.5px solid black;
+    padding-left: 20px;
+  }
+
+  // .list-md .item-input.item-input-has-focus:last-child, .list-md .item-input.input-has-focus:last-child {
+  //   border-bottom-color: #742284;
+  //   box-shadow: inset 0 -1px 0 0 #742284;
+  //   border-bottom-width: 1px;
+  // }
+
+  .text-input {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+  }
+
+// item recibir alertas
+  .item-md.item-toggle ion-label {
+    margin-left: 15px;
+  }
+
+  ion-item.item.item-block.item-md.item-toggle {
+    margin-top: 10%;
+  }
+
+  // TOGGLE BUTTON
+
+  ion-toggle.toggle.toggle-md.toggle-checked {
+    margin-right: 15%;
+  }
+
+  .item-md .toggle-md {
+    padding: 12px 8px 12px 0px;
+    padding-bottom: 22px;
+    padding-right: 12px;
+  }
+  ion-toggle {
+    zoom: 1.5;
+  }
+  // CHECKED
+  .toggle-md.toggle-checked .toggle-icon {
+    background-color: #9e9d9d;
+    height: 29px;
+    width: 43px;
+  }
+  .toggle-md.toggle-checked .toggle-inner {
+    top: 2;
+    width: 25px;
+    height: 25px;
+    background-color: #ffffff;
+  }
+  // UNCHECKED
+  .toggle-md .toggle-icon{
+    background-color: #00B800;
+    width: 43px;
+    height: 29px;
+  }
+  .toggle-md .toggle-inner {
+    top: 2px;
+    left: 1px;
+    width: 25px;
+    height: 25px;
+  }
+
+
+  .label-style{
+    margin-left: 35px;
+  }
+
+
+  // BOTON MIS RESERVAS
+  .boton {
+    background-color: #742284 ;
+    height: 50px;
+    width: 195px;
+    letter-spacing: 1.5px;
+    font-family: 'Open Sans', sans-serif;
+    // margin-left: 20%;
+    margin-top: 7%;
+  }
+
+  .button-md:hover:not {
+    background-color: #742284;
+  }
+
+  .button-md.activated {
+    background-color: #742284;
+    box-shadow: none;
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
+    width: 105%;
+  }
+
+  // P
+  .resaltado {
+    color:#488aff;
+  }
+
+  .posicion {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  //-----------------------------------------------------------------------------//
+  //-----------------------------------------------------------------------------//
+  //-----------------------------------------------------------------------------//
+  //-----------------------------------------------------------------------------//
+
+  .grid {
+    width: 104% !important;
+  }
+
+  ion-col.col {
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .circulo {
+    background-color: pink;
+    width: 65px;
+    height: 65px;
+    border-radius: 35px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    margin-bottom: 5px;
+    // justify-content: center;
+  }
+
+  .blanco {
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rojo {
+    background-color: red;
+    width: 12px;
+    height: 12px;
+    border-radius: 25px;
+  }
+
+  .amenity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+}

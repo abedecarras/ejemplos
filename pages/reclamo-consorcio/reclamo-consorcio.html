@@ -1,0 +1,42 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <!-- <img src="assets/imgs/bg.jpg" class="imgPos"> -->
+    <ion-title text-center text-capitalize class="text">pedidos y sugerencias</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-fab bottom right>
+    <button ion-fab (click)="goHome()">
+      <ion-icon name="ios-home"></ion-icon>
+    </button>
+  </ion-fab>
+
+  <div class="text consorcio" text-capitalize text-center>
+    <ion-item class="margin-consorcio">
+      <ion-select cancelText="Cancelar" okText="Aceptar"[(ngModel)]="partnershipSelected" placeholder="CONSORCIO">
+        <ion-option *ngFor="let item of partnershipsList" [value]="item.ConsorcioId">{{item.ConsorcioDescripcion}}</ion-option>
+      </ion-select>
+    </ion-item>
+  </div>
+
+  <div text-center class="generar">
+    <button class="boton large" ion-button round text-uppercase (click)="consultarReclamos()">
+      <img src="assets/imgs/lupa.svg" alt="">
+      consultar tickets</button>
+  </div>
+
+  <div [ngClass]="isNeighbor ? 'generar':'hidden'" text-center>
+    <button [ngClass]="{'hidden': isAdmin }" class="boton bg-color" ion-button round text-uppercase (click)="goGenerarTicket()">
+      <img src="assets/imgs/ticket.svg" alt="">
+      generar ticket</button>
+  </div>
+
+</ion-content>

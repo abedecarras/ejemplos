@@ -1,0 +1,244 @@
+page-estado-de-cuenta {
+
+  .liquidationsList {
+    margin-top: 50px;
+  }
+
+  .list-input {
+    background-color: transparent;
+    color:#424242;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+  }
+
+  // Navbar Style
+
+  ion-header.header.header-md {
+    top: 7%;
+  }
+
+  button.bar-buttons.bar-buttons-md.bar-button.bar-button-md.bar-button-default.bar-button-default-md.bar-button-menutoggle.bar-button-menutoggle-md {
+    color: white;
+  }
+
+  ion-title.text.title.title-md {
+    margin-top: -36%;
+    margin-left: -10%;
+    width: 100%;
+  }
+
+  .toolbar-title-md {
+    color: white;
+  }
+
+  button.back-button.bar-button.bar-button-md.back-button-md.bar-button-default.bar-button-default-md.show-back-button {
+    color: white;
+  }
+
+  ion-title.text.title.title-md {
+    margin-top: -36%;
+    width: 100%;
+  }
+
+  .scroll-content {
+    margin-top: 36% !important;
+  }
+
+  ion-navbar.toolbar.toolbar-md {
+    height: 130px;
+    margin-top: -15%;
+  }
+
+  .imgPos {
+    max-width: 135%;
+    margin-left: -30%;
+    margin-top: -15%;
+  }
+
+  //end NavBar
+
+  .fixed-content {
+    margin-top: 0%;
+    // margin-bottom: 0px;
+  }
+
+  ion-select {
+    max-width: 100%;
+  }
+
+  .alert-radio-label {
+    white-space: normal!important;
+  }
+
+  .select {
+    max-width: 53%;
+  }
+
+  .item-md {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 0px;
+  }
+
+  .display-ufs {
+    width: 100%;
+    margin-left: 25%;
+    margin-top: 10%;
+    // display: block;
+  }
+
+  .posicion {
+    display: inline-flex;
+    width: 100%;
+  }
+
+  .select-style {
+    padding-left: 0%!important;
+  }
+
+  .select-arrow.select-md .select-icon .select-icon-inner {
+    left: 0px;
+  }
+
+  .select-md .select-icon {
+    position: relative;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: #c3c3c3;
+    border-radius: 20px;
+  }
+
+  .select-md .select-icon .select-icon-inner {
+    color: color($colors, primary, base);
+    border-top: 9px solid;
+    border-right: 9px solid transparent;
+    border-left: 9px solid transparent;
+    left: 1px;
+  }
+
+  // #item-consorcio.select-style {
+  //   margin-left: -7%;
+  // }
+
+  page-menu .input-wrapper {
+    padding-left: 8px;
+  }
+
+  #item1 input-wrapper {
+    padding-left: 24px;
+  }
+
+  #item1 {
+    margin-top: -3%;
+  }
+
+  // #item1 div .input-wrapper{
+  //   padding-left: 0px;
+  // }
+  //
+  // #item2.select-md {
+  //   padding: 13px 8px 13px 4px;
+  // }
+
+  .select-style .select-text {
+    margin-left: 0%;
+    letter-spacing: 1px;
+    font-size: 11px;
+  }
+
+  .option-style {
+    // margin-left: -10%;
+    text-transform: capitalize;
+    letter-spacing: 1px !important;
+  }
+
+  .saldo {
+    text-align: center;
+  }
+
+  .item-md.item-block .item-inner {
+    border-bottom: none;
+  }
+
+  .calendar {
+    font-size:3em;
+    color: #232222;
+    border-bottom: none;
+  }
+
+  .margin-inputs {
+    margin-left: 0px;
+    border-bottom: solid 1px;
+    width: 170px;
+  }
+
+  .margins { //placeholder
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0px;
+    width: 100%;
+  }
+
+  // TOGGLE BUTTON
+  .item-md .toggle-md {
+    padding: 12px 8px 12px 0px;
+    padding-bottom: 22px;
+    padding-right: 12px;
+  }
+  ion-toggle {
+    zoom: 1.5;
+  }
+  // CHECKED
+  .toggle-md.toggle-checked .toggle-icon {
+    background-color: #9e9d9d;
+    height: 29px;
+    width: 43px;
+  }
+  .toggle-md.toggle-checked .toggle-inner {
+    top: 2;
+    width: 25px;
+    height: 25px;
+    background-color: #ffffff;
+  }
+  // UNCHECKED
+  .toggle-md .toggle-icon{
+    background-color: #00B800;
+    width: 43px;
+    height: 29px;
+  }
+  .toggle-md .toggle-inner {
+    top: 2px;
+    left: 1px;
+    width: 25px;
+    height: 25px;
+  }
+
+
+  .label-style{
+    margin-left: 35px;
+  }
+
+  .button-md:hover:not(.disable-hover) {
+    background-color: #D900C1;
+  }
+
+  .item-md.item-input.item-input-has-focus .item-inner, .item-md.item-input.input-has-focus .item-inner {
+    border-bottom-color: #d34798;
+    box-shadow: inset 0 -1px 0 0 #d34798;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .select {
+    width: 100%;
+  }
+
+  ion-label.label.label-md {
+    margin: 0 8px 0 0!important;
+    padding-top: 15px;
+  }
+
+}

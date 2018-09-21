@@ -1,0 +1,24 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <!-- <img src="assets/imgs/bg.jpg" class="imgPos"> -->
+    <ion-title text-center text-capitalize class="text">ver periodos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+
+<ion-content>
+  <ion-list>
+    <button ion-item class="text" *ngFor="let y of years" (click)="goPeriodo(y)">
+      {{y}}
+      <ion-icon name="ios-arrow-forward" item-end class="grey"></ion-icon>
+    </button>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,89 @@
+
+
+<ion-header style="top:7%;">
+
+  <!-- <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title class="text-input" text-center>Novedades</ion-title>
+		<ion-buttons end>
+			<button ion-button (click)="goBack()">
+				<ion-icon name="md-close"></ion-icon>
+			</button>
+		</ion-buttons>
+  </ion-navbar> -->
+	<ion-navbar>
+    <button style="color:white;" ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+		<div class="">
+			<img src="assets/imgs/bg.jpg" class="imgPos">
+		</div>
+	  <div class="">
+	   	<ion-title text-center class="text" style="margin-top:-37%;">Novedades</ion-title>
+	  </div>
+
+
+    <!-- <ion-buttons end>
+			<button ion-button (click)="goBack()">
+				<ion-icon name="md-close"></ion-icon>
+			</button>
+		</ion-buttons> -->
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<div [ngClass]="hasManyUfs ? 'posicion':'hidden'">
+	    <span>
+	  		<ion-item>
+	      		<ion-select [(ngModel)]="partnershipSelected" (ngModelChange)="selectingPartnership()"  cancelText="Cancelar" placeholder="Consorcio">
+					    <ion-option *ngFor="let item of partnershipsList" [value]="item.ConsorcioId">{{item.ConsorcioDescripcion}}</ion-option>
+	    	  	</ion-select>
+	      	</ion-item>
+	    </span>
+	</div>
+
+	<ion-list *ngIf="!show; else showMore">
+		<ion-item text-wrap *ngFor="let newItem of news | slice:0:4;" (click)="goNovedad(newItem)">
+				<ion-avatar item-start>
+						<img src="{{ newItem.creadoPorImagen }}">
+		    </ion-avatar>
+				<div class="bloque">
+						<h2><b>{{newItem.titulo}}</b></h2>
+						<h4 text-wrap> {{newItem.cuerpo}}</h4>
+				</div>
+		    <ion-icon *ngIf="newItem.adjuntos.length > 0" item-right name="md-attach"></ion-icon>
+	    	<!-- <ion-icon ios="ios-time" md="md-time"></ion-icon><small> {{newItem.Fecha}}</small> -->
+		</ion-item>
+		<button *ngIf="botonVerMas" class="boton" ion-button round text-uppercase (click)="changeText()">{{btn_txt}}</button>
+	</ion-list>
+
+	<ng-template #showMore>
+		<ion-list>
+			<ion-item text-wrap *ngFor="let newItem of news" (click)="goNovedad(newItem)">
+					<ion-avatar item-start>
+							<img src="{{ newItem.creadoPorImagen }}">
+					</ion-avatar>
+					<div class="bloque">
+							<h2><b>{{newItem.titulo}}</b></h2>
+							<h4 text-wrap> {{newItem.cuerpo}}</h4>
+					</div>
+					<ion-icon *ngIf="newItem.adjuntos.length > 0" item-right name="md-attach"></ion-icon>
+					<!-- <ion-icon ios="ios-time" md="md-time"></ion-icon><small> {{newItem.Fecha}}</small> -->
+			</ion-item>
+			<button *ngIf="botonVerMas" class="boton" ion-button round text-uppercase (click)="changeText()">{{btn_txt}}</button>
+		</ion-list>
+	</ng-template>
+
+	<!-- <div text-center class="cartel">
+		<h1 class="family">Próximamente</h1>
+		<h6 class="family" style="padding-top:">Esta sección se actualizará</h6>
+		<h6 class="family" style="margin-top:-3%">a la brevedad.</h6>
+	</div> -->
+
+
+
+</ion-content>

@@ -1,0 +1,117 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+		<img src="assets/imgs/bg.jpg" class="imgPos">
+		<ion-title text-center class="text" text-capitalize>ver reclamos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+  <!-- <div [ngClass]="hasManyUfs ? 'display-ufs':'hidden'">
+    <span>
+      <ion-item id="item-consorcio">
+        <ion-select class="" [(ngModel)]="partnershipSelected" (ngModelChange)="selectingPartnership()" placeholder="Consorcio">
+          <ion-option class="" *ngFor="let item of partnershipsList" [value]="item.ConsorcioId">{{item.ConsorcioDescripcion}}</ion-option>
+        </ion-select>
+      </ion-item>
+    </span>
+
+    <span>
+      <ion-item>
+        <ion-select [ngClass]="partnershipSelected ? '':'hidden'" [(ngModel)]="ufSelected" placeholder="Unidad">
+          <ion-option *ngFor="let item of ufsActivesList" [value]="item.UnidadFuncionalId">{{item.UnidadFuncionalNombre}}</ion-option>
+        </ion-select>
+      </ion-item>
+    </span>
+  </div> -->
+
+
+  <!-- DIV DETALLE TICKET (MAIN) -->
+  <!-- <div [ngClass]="ufSelected ? 'detalle-ticket':'hidden'"> -->
+  <div Class='detalle-ticket'>
+    <div padding class="detalle">
+      <h5 class="margin-detalle" text-capitalize>pedidos realizados</h5>
+    </div>
+
+    <!-- SELECT TIPO PEDIDO -->
+    <ion-item class="margin-motivo">
+      <ion-select [(ngModel)]="claimTypeSelected" placeholder="Motivo">
+        <ion-option *ngFor="let item of claimTypes" [value]="item.Id">{{item.Descripcion}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <!-- CHECK AFECTA OTRA UNIDAD -->
+    <ion-item class="margin-unidad">
+      <ion-label>Afecta otra unidad</ion-label>
+      <ion-checkbox color="dark" checked="true" [(ngModel)]="isOtherUFAffected"></ion-checkbox>
+    </ion-item>
+
+    <!-- SELECT UNIDAD AFECTADA -->
+    <ion-item id="select1">
+      <ion-select id="select2" [ngClass]="isOtherUFAffected ? '':'hidden'" [(ngModel)]="otherUfSelected" placeholder="Unidad Afectada">
+        <ion-option *ngFor="let item of ufsOthersList" [value]="item.Id">{{item.Descripcion}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <!-- TEL CONTACTO -->
+    <h5>Tel. Contacto</h5>
+    <ion-item class="margin-inputs">
+      <ion-input type="number" [(ngModel)]="phone" maxlength="11"></ion-input>
+    </ion-item>
+
+
+    <!-- COMENTARIOS -->
+    <h5 class="margin-comentarios">Comentarios:</h5>
+    <ion-item class="margin-comments">
+      <ion-textarea [(ngModel)]="comments" placeholder="Escriba aquí su comentario"></ion-textarea>
+    </ion-item>
+
+    <hr>
+
+    <!--  CAMERA BUTTON-->
+
+    <button *ngIf="notTaken; else taken" ion-button class="btn-camera margin-comentarios" type="button" (click)='runCamera()'>
+      <div>
+        <ion-icon class="icon-camera"name="camera"></ion-icon><br>
+        <label>Tomar Foto</label><br>
+        <label> comprobante</label>
+      </div>
+    </button>
+
+    <ng-template #taken>
+      <ion-datetime displayFormat="MM/DD/YYYY"></ion-datetime>
+
+      <div class="index-{{ i }}" *ngFor="let v of images; let i=index">
+          <div class="progress-outer">
+            <div class="progress-inner">
+
+            </div>
+          </div>
+          <!--  2 formas de hacer lo mismo: ngClass y *ngIf -->
+          <ion-icon [ngClass]="loaded[i] == true ? 'color size':'hidden'" name="checkmark"></ion-icon>
+          <ion-icon *ngIf="loaded[i]" class="size" (click)="removeItem(i)" name="ios-trash"></ion-icon>
+        </div>
+
+      <!-- </div> -->
+
+        <button ion-button icon-strat class="btn-camera2" (click)='runCamera()'>
+            <ion-icon class="icon-camera2" name="camera"></ion-icon>
+            Tomar otra imágen
+        </button>
+      </ng-template>
+
+    <!-- FIN DIV PRINCIPAL -->
+    </div>
+
+    <button ion-button full type="button" name="button" [ngClass]="ufSelected ? 'boton-footer':'hidden'" (click)='sendClaim()'>
+      <span class="text">Enviar Reclamo</span>
+      <ion-icon class="arrow" name="ios-arrow-round-forward"></ion-icon>
+    </button>
+
+</ion-content>

@@ -1,0 +1,95 @@
+
+<ion-header style="top:7%;">
+
+  <ion-navbar>
+    <button style="color:white;" ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+		<div class="">
+			<img src="assets/imgs/bg.jpg" class="imgPos">
+		</div>
+	  <div class="">
+	   	<ion-title text-center class="text" style="margin-top:-37%;">Registrar Consorcio</ion-title>
+	  </div>
+
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+  <!-- <div class="posicion">
+    <span>
+      <ion-item >
+        <ion-select [(ngModel)]="partnershipSelected" (ngModelChange)="selectingPartnership()" placeholder="Consorcio">
+          <ion-option *ngFor="let item of partnershipsList" [value]="item.ID">{{item.DESCRIPCION}}</ion-option>
+        </ion-select>
+      </ion-item>
+    </span>
+
+    <span>
+      <ion-item>
+        <ion-select [ngClass]="partnershipSelected ? '':'hidden'" [(ngModel)]="ufSelected" (ngModelChange)="selectingUF()" placeholder="Unidad">
+          <ion-option *ngFor="let item of ufsList" [value]="item.Id">{{item.Descripcion}}</ion-option>
+        </ion-select>
+      </ion-item>
+    </span>
+  </div> -->
+
+  <!-- DIV SALDO (MAIN) -->
+  <!-- <div [ngClass]="ufSelected ? 'saldo':'hidden'">
+    <div padding class="saldo-style">
+    <!-- <div class="saldo-inner"> --> -->
+      <!-- <h4 ngController="balanceDate">Saldo al {{balanceDate}}</h4> -->
+    <!-- </div> -->
+    <!-- <div class="saldo-inner" style="margin-top:10%;"> -->
+      <!-- <h6 ngController="balanceCash">Saldo actual: ${{balanceCash}}</h6> -->
+    <!-- </div> -->
+    <!-- </div>
+
+    <h4>Detalle del pago</h4> -->
+
+    <!-- DATEPICKER -->
+    <!-- <ion-item style="margin-left:15%;">
+      <ion-datetime item-left displayFormat="DD/MM/YYYY" placeholder="04/07/2015" [(ngModel)]="paymentDate"></ion-datetime>
+      <ion-label><ion-icon class="calendar" icon-end ios="ios-calendar" md="md-calendar"></ion-icon></ion-label>
+    </ion-item> -->
+
+    <!-- SELECT FORMAS DE PAGO -->
+    <!-- <ion-item style="margin-left:15%;">
+      <ion-select [(ngModel)]="paymentMethodSelected" placeholder="Formas de Pago">
+        <ion-option *ngFor="let item of paymentMethodsList" [value]="item.Id">{{item.Descripcion}}</ion-option>
+      </ion-select>
+    </ion-item> -->
+
+    <!-- INPUT MONTO -->
+    <!-- <div style="margin-top: 10%;">
+      Coloque aquí el monto abonado
+    	<ion-item class="margin-inputs">
+    		<ion-input class="text-input" style="margin-left:15%;" [(ngModel)]="paymentCash" placeholder="$ XXXX"></ion-input>
+    	</ion-item>
+    </div> -->
+
+  <!-- FIN DIV PRINCIPAL -->
+  <!-- </div> -->
+
+  <!-- TOOGLE -->
+  <!-- <ion-item [ngClass]="ufSelected ? '':'hidden'" style="margin-top:10px;" no-lines>
+  	<ion-label class="text-input" style="margin-left:20%;">Enviar Recibo</ion-label>
+  	<ion-toggle class="toggle-big" value="foo" checked="true" [(ngModel)]="sendVoucher" style="margin-right:30px;"></ion-toggle>
+  </ion-item> -->
+
+  <!-- BUTTON INGRESAR COBRO-->
+  <!-- <button style="margin-top:8%;" ion-button full type="button" name="button" [ngClass]="ufSelected ? 'boton-footer':'hidden'" (click)='sendCharge()'>
+    <span class="text">Ingresar Cobro</span>
+    <ion-icon class="arrow" name="ios-arrow-round-forward"></ion-icon>
+  </button> -->
+
+  <div text-center class="cartel">
+		<h1 class="family">Próximamente</h1>
+		<h6 class="family" style="padding-top:">Esta sección se actualizará</h6>
+		<h6 class="family" style="margin-top:-3%">a la brevedad.</h6>
+	</div>
+
+
+</ion-content>

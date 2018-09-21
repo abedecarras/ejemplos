@@ -1,0 +1,158 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title text-center class="text" text-capitalize>Reserva de Amenities</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="card-background-page">
+
+  <ion-card>
+    <img src="{{'assets/imgs/amenities/barra/' + amenity + '.png'}}" alt="">
+    <!-- <img src="assets/imgs/amenities/1barra-sum.png"/> -->
+    <div class="card-title family">{{amenity}}</div>
+    <!-- <div class="card-subtitle">41 Listings</div> -->
+  </ion-card>
+
+
+  <ion-fab bottom right>
+    <button ion-fab (click)="goHome()">
+      <ion-icon name="ios-home"></ion-icon>
+    </button>
+  </ion-fab>
+
+  <!-- DIV DETALLE TICKET (MAIN) -->
+  <div class="detalle-ticket" text-center>
+
+    <div padding class="detalle">
+      <h4 class="text" text-capitalize>detalle de la reserva</h4>
+      <!-- DATEPICKER -->
+      <ion-item>
+        <ion-label><ion-icon class="calendar" ios="ios-calendar" md="md-calendar"></ion-icon></ion-label>
+        <ion-datetime [ngClass]="{'error': paymentMethodSelectedHasError }" (ionChange)='paymentMethodSelectedHasError = false' doneText="aceptar" cancelText="cancelar" item-right displayFormat="DD/MM/YYYY" placeholder="Ingrese Fecha" [(ngModel)]="paymentDate"></ion-datetime>
+      </ion-item>
+    </div>
+
+    <ion-list radio-group>
+      <div class="detalle" [ngClass]="{'hidden' : isNeighbor}" text-center>
+
+        <ion-item class="">
+          <ion-label>menos de 25 personas</ion-label>
+          <ion-radio color="dark" item-left></ion-radio>
+        </ion-item>
+
+        <div class="bloque">
+          <ion-icon name="md-time" item-start></ion-icon>
+          <div class="flecha">
+          </div>
+          <div class="etiqueta family">media jornada</div>
+        </div>
+      </div>
+
+      <div class="detalle" [ngClass]="{'hidden' : isNeighbor}" text-center>
+        <ion-item class="">
+          <ion-label>entre 26 y 40 personas</ion-label>
+          <ion-radio color="dark" item-left></ion-radio>
+        </ion-item>
+        <!-- <h5>menos de 25 personas</h5> -->
+
+        <div class="bloque">
+          <ion-icon name="md-time" item-start></ion-icon>
+          <div class="flecha">
+          </div>
+          <div class="etiqueta family">media jornada</div>
+        </div>
+      </div>
+
+      <div class="detalle" [ngClass]="{'hidden' : isNeighbor}" text-center>
+        <ion-item class="">
+          <ion-label>entre 41 y 60 personas</ion-label>
+          <ion-radio color="dark" item-left></ion-radio>
+        </ion-item>
+        <!-- <h5>menos de 25 personas</h5> -->
+
+        <div class="bloque">
+          <ion-icon name="md-time" item-start></ion-icon>
+          <div class="flecha">
+          </div>
+          <div class="etiqueta family">media jornada</div>
+        </div>
+      </div>
+
+      <div class="detalle" [ngClass]="{'hidden' : isNeighbor}" text-center>
+        <ion-item class="">
+          <ion-label>menos de 25 personas</ion-label>
+          <ion-radio color="dark" item-left></ion-radio>
+        </ion-item>
+        <!-- <h5>menos de 25 personas</h5> -->
+
+        <div class="bloque">
+          <ion-icon name="md-time" class="yellow" item-start></ion-icon>
+          <div class="flecha yellow">
+          </div>
+          <div class="etiqueta completa family">jornada completa</div>
+        </div>
+      </div>
+
+      <div class="detalle" [ngClass]="{'hidden' : isNeighbor}" text-center>
+        <ion-item class="">
+          <ion-label>entre 26 y 40 personas</ion-label>
+          <ion-radio color="dark" item-left></ion-radio>
+        </ion-item>
+        <!-- <h5>menos de 25 personas</h5> -->
+
+        <div class="bloque">
+          <ion-icon name="md-time" class="yellow" item-start></ion-icon>
+          <div class="flecha yellow">
+          </div>
+          <div class="etiqueta completa family">jornada completa</div>
+        </div>
+      </div>
+
+      <div class="detalle" [ngClass]="{'hidden' : isNeighbor}" text-center>
+        <ion-item class="">
+          <ion-label>entre 41 y 60 personas</ion-label>
+          <ion-radio color="dark" item-left></ion-radio>
+        </ion-item>
+        <!-- <h5>menos de 25 personas</h5> -->
+
+        <div class="bloque">
+          <ion-icon name="md-time" class="yellow" item-start></ion-icon>
+          <div class="flecha yellow">
+          </div>
+          <div class="etiqueta completa family">jornada completa</div>
+        </div>
+      </div>
+
+    </ion-list>
+
+    <!-- TEL CONTACTO -->
+    <div class="container">
+      <h5>Tel. Contacto</h5>
+      <ion-item class="margin-inputs bg-color">
+        <ion-input type="tel" [(ngModel)]="phone" [ngClass]="{'error': phoneHasError }" (ionChange)='phoneHasError = false' maxlength="12" placeholder="N° (cod area) + num"></ion-input>
+      </ion-item>
+    </div>
+
+    <ion-item class="margin-unidad">
+      <ion-label text-wrap class="size">Acepto que la confirmación de la reserva genere un cargo particular a mi unidad</ion-label>
+      <ion-checkbox class="no-margin"></ion-checkbox>
+    </ion-item>
+
+  </div>
+
+  <!-- BUTTON GENERAR TICKET-->
+  <button ion-button full class="boton-footer" (click)='sendClaim()'>
+    <span class="text" text-uppercase>reservar</span>
+    <ion-icon class="arrow" name="ios-arrow-round-forward"></ion-icon>
+  </button>
+
+
+</ion-content>

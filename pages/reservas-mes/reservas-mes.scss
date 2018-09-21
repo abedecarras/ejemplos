@@ -1,0 +1,267 @@
+page-reservas-mes {
+
+  ion-content.content.content-md {
+    background-color: rgb(233, 230, 232);
+  }
+
+  div {
+    h1 {
+      padding-left: 6%;
+      font-weight: bold;
+      display: inline;
+    }
+    ion-icon {
+      font-size: 2.8rem;
+      font-weight: bold;
+      margin-right: 4%;
+      // padding-right: 5%;
+    }
+  }
+
+  .transparent {
+    color: black;
+    background-color: rgb(233, 230, 232);
+    box-shadow: none;
+    width: 100%;
+  }
+
+  .generar {
+    background-color: #ffffff;
+    height: 15%;
+    padding-top: 2%;
+  }
+
+  .boton {
+    // padding-top: 4%;
+    // margin-top: 4%;
+    height: 50px;
+    width: 195px;
+    background-color: #F003CF;
+    margin: 0 10px;
+    letter-spacing: 1px;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .padding {
+    height: 14%;
+    // padding-left: 0%;
+    // padding-top: 2%;
+    display: flex;
+    align-items: center;
+  }
+
+  .pedidos {
+    background-color: color($colors, primary, base);
+    height: 12%;
+    color: color($colors, light, base);
+    text-align: center;
+    margin-top: -5%;
+  }
+
+  div p {
+    font-size: 1.8rem;
+    padding-top: 5%;
+  }
+
+  .fila-titulos {
+    background-color:	#98748D;
+    color: color($colors, light, base);
+    border-bottom: 1px solid black;
+    border-top:  1px solid black;
+    padding-left: 5%;
+  }
+
+  .border {
+    border: 1px solid ;
+  }
+
+  .item-md [right]{
+    padding-left: 0px!important;
+  }
+
+  // ion-label.label.label-md {
+  //   margin-right: 0px;
+  // }
+
+  ion-label.label.label-md {
+    margin: 0!important;
+    padding-top: 6px;
+  }
+
+  button.item.item-block.item-md {
+    padding-left: 0px;
+    font-size: 1.4rem;
+  }
+
+  ion-icon.grey.icon.icon-md.ion-ios-arrow-forward.item-icon {
+    margin-right: 0px;
+  }
+
+  .input-wrapper {
+    font-size: 0.8em;
+    text-transform: uppercase;
+  }
+
+  .small {
+    letter-spacing: 0px!important;
+    width: 100%;
+    margin-left: 7px;
+    border-radius: 3px;
+  }
+
+  .state {
+    font-size: 1rem!important;
+  }
+
+  // div ion-col.col {
+  //   padding-left: 5%;
+  // }
+
+  button.item.item-block.item-md {
+    border-bottom: 1px solid #8c8c8c;
+    background-color: rgb(233, 230, 232);
+  }
+
+  .boton-ver-mas {
+    height: 50px;
+    width: 195px;
+    letter-spacing: 1px;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 2%;
+  }
+
+  .fila-titulos ion-col {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+
+  .col3 {
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+
+  .green-border {
+    color: #5FC666;
+    border: 1px solid #5FC666;
+  }
+
+  .violet-border {
+    color: color($colors, primary, base);
+    border: 1px solid color($colors, primary, base);
+  }
+
+  .red-border {
+    color: red;
+    border: 1px solid red;
+  }
+
+  .yellow-border {
+    color: rgb(232, 202, 1);
+    border: 1px solid rgb(232, 202, 1);
+  }
+
+  .grey-border {
+    color: rgb(113, 113, 113);
+    border: 1px solid rgb(113, 113, 113);
+  }
+
+
+  .grey {
+    color: grey;
+  }
+
+  .dark-grey {
+    color: #3b3c3c;
+  }
+
+  .light-grey {
+    color: #666869;
+  }
+
+  .mid-grey {
+    color: #464545;
+  }
+
+  // Navbar Style
+
+  ion-header.header.header-md {
+    top: 7%;
+  }
+
+  ion-title.text.title.title-md {
+    margin-top: -36%;
+    margin-left: -10%;
+    width: 100%;
+  }
+
+  .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+    color: white;
+  }
+
+  .toolbar-title-md {
+    color: white;
+  }
+
+  button.back-button.bar-button.bar-button-md.back-button-md.bar-button-default.bar-button-default-md.show-back-button {
+    color: white;
+  }
+
+  .scroll-content {
+    margin-top: 33% !important;
+  }
+
+  ion-navbar.toolbar.toolbar-md {
+    height: 130px;
+    margin-top: -50px;
+  }
+
+  .imgPos {
+    max-width: 135%;
+    margin-left: -30%;
+    margin-top: -15%;
+  }
+
+  //end NavBar
+
+  // .item-md {
+  //   width: 100%;
+  //   padding-left: 15px;
+  //   padding-right: 0px;
+  // }
+
+  // page-menu .input-wrapper {
+  //   padding-left: 8px;
+  // }
+
+  // .item-md.item-block .item-inner {
+  //   border-bottom: none;
+  // }
+
+  // //color placeholder
+  // .text-input::-webkit-input-placeholder {
+  //   text-indent: 0;
+  //   color: #999;
+  // }
+
+  // .text-input-md {  //placeholder
+  //   text-align: center;
+  //   padding: 0;
+  //   width: calc(100% - 8px - 8px);
+  // }
+
+  // //click button hover
+  // .button-md:hover:not(.disable-hover) {
+  //   background-color: color($colors, secondary, base);
+  // }
+
+  .hidden {
+    // display: none;
+    visibility: hidden;
+  }
+
+  // button.button.button-md.button-default.button-default-md.button-full.button-full-md.boton-footer {
+  //   margin-top: 8%;
+  // }
+
+}

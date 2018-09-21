@@ -1,0 +1,114 @@
+page-pedidos-y-sugerencias {
+
+  // navbar
+  ion-navbar.toolbar.toolbar-md {
+    margin-top: 0%!important;
+  }
+
+  button.bar-buttons.bar-buttons-md.bar-button.bar-button-md.bar-button-default.bar-button-default-md.bar-button-menutoggle.bar-button-menutoggle-md {
+    color: white;
+  }
+
+  ion-title.text.title.title-md {
+    width: 100%;
+    // margin-left: -10%;
+  }
+
+  .toolbar-title-md {
+    color: white;
+  }
+
+  button.back-button.bar-button.bar-button-md.back-button-md.bar-button-default.bar-button-default-md.show-back-button {
+    color: white;
+  }
+
+  //------------------------------------------------------
+
+  ion-content.content.content-md {
+    background-color: rgb(233, 230, 232);
+  }
+
+  div {
+    h1 {
+      font-weight: bold;
+      display: inline;
+    }
+    ion-icon {
+      font-size: 3rem;
+      // margin-left: 15%;
+    }
+  }
+
+  .btn {
+    border-bottom: none!important;
+    margin-top: -3%;
+  }
+
+  .item-inner {
+    border-bottom: none!important;
+  }
+
+  .generar {
+    // background-color: #ffffff;
+    height: 15%;
+    padding-top: 2%;
+  }
+
+  .boton {
+    // padding-top: 4%;
+    height: 50px;
+    width: 195px;
+    background-color: #01c15e;
+    margin: 0 10px;
+    letter-spacing: 1px;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .padding {
+    height: 14%;
+    padding-left: 18%;
+    padding-top: 4%;
+  }
+
+  .pedidos {
+    background-color: color($colors, primary, base);
+    height: 15%;
+    color: color($colors, light, base);
+    text-align: center;
+    margin-top: -5%;
+  }
+
+  div p {
+    font-size: 2rem;
+    padding-top: 7%;
+  }
+
+  button.item.item-block.item-md {
+    border-bottom: 1px solid #8c8c8c;
+    background-color: rgb(233, 230, 232);
+  }
+
+  .input-wrapper {
+    padding-left: 15%;
+    font-size: 1.6rem;
+  }
+
+  ion-label.label.label-md {
+    margin: 0 8px 0 0!important;
+    padding-top: 15px;
+  }
+
+  .hidden {
+    visibility: hidden;
+  }
+
+  .grey {
+    color: #3b3c3c;
+  }
+
+  img {
+    width: 18%;
+    margin-right: 5px;
+  }
+
+}

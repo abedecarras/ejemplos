@@ -1,0 +1,151 @@
+
+<ion-header>
+
+	  <ion-navbar>
+	    <button ion-button menuToggle>
+	      <ion-icon name="menu"></ion-icon>
+	    </button>
+			<img src="assets/imgs/bg.jpg" class="imgPos">
+			<ion-title text-center class="text" text-wrap>Reserva de Amenities</ion-title>
+
+	    <!-- <ion-buttons end>
+				<button ion-button (click)="goBack()">
+					<ion-icon name="md-close"></ion-icon>
+				</button>
+			</ion-buttons> -->
+	  </ion-navbar>
+
+  <!-- <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu" icon-right></ion-icon>
+    </button>
+    <ion-title class="text-input" style="margin-left:20px">Reservas Amenities</ion-title> -->
+		<!--You can use the <ion-buttons> directive inside of <ion-navbar> to do this.
+		<ion-buttons start> will add a button to the left side and <ion-buttons end> will add it to the right.-->
+		<!-- <ion-buttons end>
+			<button ion-button (click)="goBack()">
+				<ion-icon name="md-close"></ion-icon>
+			</button>
+		</ion-buttons>
+  </ion-navbar> -->
+
+</ion-header>
+
+
+<ion-content padding>
+	<ion-grid>
+		<ion-row wrap>
+			<ion-col col-4 *ngFor="let item of amenities">
+				<div class="amenity">
+					<div class="circulo" (click)="goAmenity(item)">
+						<img src="{{'./assets/imgs/amenities/' + item + '.png'}}" alt="">
+						<div class="blanco">
+							<div class="rojo">
+
+							</div>
+						</div>
+
+					</div>
+					{{item}}
+				</div>
+			</ion-col>
+
+		</ion-row>
+	</ion-grid>
+
+	<!-- <ion-grid>
+		  <ion-row>
+			    <ion-col>
+						<div class="circulo">
+							<div class="blanco">
+								<div class="rojo">
+
+								</div>
+							</div>
+
+						</div>
+			      SUM
+			    </ion-col>
+			    <ion-col>
+						<div class="circulo">
+
+						</div>
+			      PILETA
+			    </ion-col>
+					<ion-col>
+						<div class="circulo">
+
+						</div>
+			      QUINCHO
+			    </ion-col>
+		  </ion-row>
+		  <ion-row>
+			    <ion-col>
+						<div class="circulo">
+
+						</div>
+			      GIMNASIO
+			    </ion-col>
+			    <ion-col>
+						<div class="circulo">
+
+						</div>
+			      LOUNDRY
+			    </ion-col>
+			    <ion-col>
+						<div class="circulo">
+
+						</div>
+			      CANCHA TENIS
+			    </ion-col>
+		  </ion-row>
+			<ion-row>
+			    <ion-col col-4>
+						<div class="circulo">
+
+						</div>
+			      PARRILLA
+			    </ion-col>
+			    <ion-col col-4>
+						<div class="circulo">
+
+						</div>
+			      SAUNA
+			    </ion-col>
+		  </ion-row>
+	</ion-grid> -->
+
+	<div class="center">
+		<button class="boton" ion-button round (click)="goReservas()">mis reservas</button>
+	</div>
+
+
+	<!-- <ion-list>
+		<div class="margin-inputs">
+			<button class="list-button" ion-item *ngFor="let a of amenities" (click)="openPage(a)">
+				{{a.name}}
+			</button>
+		</div>
+	</ion-list> -->
+
+	<!-- TOOGLE -->
+	<!-- <ion-item no-lines>
+		<ion-label class="text-input" text-uppercase>recibir alertas</ion-label>
+		<ion-toggle value="foo" checked="true"></ion-toggle>
+	</ion-item> -->
+
+	<!-- BOTON "MIS RESERVAS" -->
+	<!-- <button class="boton" ion-button round>mis reservas</button>
+
+	<div class="posicion">
+		<div>Haciendo click en Recibir alertas aceptas </div>
+		<div>los <span class="resaltado">Terminos de uso</span> y <span class="resaltado">Privacidad</span></div>
+	</div> -->
+
+	<!-- <div text-center class="cartel">
+		<h1 class="family">Próximamente</h1>
+		<h6 class="family" style="padding-top:">Esta sección se actualizará</h6>
+		<h6 class="family" style="margin-top:-3%">a la brevedad.</h6>
+	</div> -->
+
+</ion-content>

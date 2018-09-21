@@ -1,0 +1,53 @@
+page-reclamos-periodo {
+  // Navbar Style
+
+  ion-navbar.toolbar.toolbar-md {
+    margin-top: 0%!important;
+  }
+
+
+  .toolbar-title.toolbar-title-md {
+    color: white;
+  }
+
+  ion-title.text.title.title-md {
+    width: 100%;
+  }
+
+  .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+    color: #ffffff;
+    background-color: transparent;
+  }
+
+  ion-label.label.label-md {
+    margin: 0 8px 0 0!important;
+    padding-top: 15px;
+  }
+
+  .input-wrapper {
+    padding-left: 15%;
+  }
+
+  .select-md .select-icon {
+    position: relative;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: #c3c3c3;
+    border-radius: 20px;
+  }
+
+  .select-md .select-icon .select-icon-inner {
+    color: color($colors, primary, base);
+    border-top: 9px solid;
+    border-right: 9px solid transparent;
+    border-left: 9px solid transparent;
+    left: 1px;
+  }
+
+  .grey {
+    color: #3b3c3c;
+  }
+
+
+}

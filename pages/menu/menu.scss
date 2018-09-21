@@ -1,0 +1,123 @@
+page-menu {
+
+    // #menu{
+    //   margin-top: -190%;
+    // }
+
+    ion-toolbar .item-md.item-block .item-inner {
+      padding-right: 0px;
+      border-bottom: none;
+    }
+
+    .toolbar-background-md {
+      background: #ffffff!important;
+    }
+
+    .toolbar-md {
+      min-height: 100%;
+    }
+
+    .navbar-height {
+      height: 100px;
+    }
+
+    .menu-inner {
+      width: 100%;
+    }
+
+    .title-menu{
+      margin-top: -40%;
+    }
+
+    .avatar {
+      width: 20%;
+      float: left;
+      margin-top: -10px;
+    }
+
+    .avt {
+      float: left;
+      background-color: #ffffff;
+      width: 50px;
+      height: 50px;
+      border-radius: 25px;
+      position: absolute;
+      left: 17px;
+      overflow: hidden;
+      top:23px;
+    }
+
+    ion-title.title.title-md {
+      margin-left: 25%;
+      width: 60%;
+      // margin-left: -10%;
+      // width: 100%;
+    }
+
+    .img-menu-position {
+      float: right;
+      margin-top: -15%;
+      margin-right: 10px;
+      display: inline-flex;
+    }
+
+    .nav-container {
+      display: inline;
+    }
+
+    ion-toolbar .toolbar-title-md {
+      font-size: 1.4rem;
+      margin-left: 1%;
+      margin-top: 10%;
+    }
+
+    ion-toolbar .input-wrapper {
+      padding-left: 0px;
+    }
+
+
+
+    ion-navbar.toolbar.toolbar-md {
+      height: 130px;
+      margin-top: -15%;
+    }
+
+    .input-wrapper { //Espacio entre los botonose del side menu
+      margin-bottom: 0%;
+      margin-top: 0%;
+      padding-left: 12px;
+      letter-spacing: 1.5px;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .scroll-content {
+      margin-left: -14px;
+      height: 80%;
+      // margin-top: 43%!important;
+    }
+
+    #badge {
+      border-radius: 10px;
+      background-color:	#712387;
+    }
+
+    ion-menu {
+      width:85%;
+    }
+
+    .img-list {
+      width: 35px;
+      position: relative;
+      top: 15px;
+    }
+
+    ion-label.label.label-md {
+      margin: -14px 8px 7px 0;
+      height: 49px;
+    }
+
+
+
+}

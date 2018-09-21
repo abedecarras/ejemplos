@@ -1,0 +1,29 @@
+
+<ion-header>
+</ion-header>
+
+
+<ion-content padding>
+  <button ion-button icon-only (click)="close()">
+    <ion-icon name="close"></ion-icon>
+  </button>
+  <div *ngIf="isError; else ok">
+    <ion-icon class="cross" name="ios-close-circle-outline"></ion-icon>
+    <div text-center class="container">
+      <h1>error</h1>
+    </div>
+    <!-- <h1 text-uppercase text-center>error</h1> -->
+  </div>
+
+  <ng-template #ok>
+    <ion-icon class="check" name="ios-checkmark-circle-outline"></ion-icon>
+    <div text-center class="container">
+      <h1>correcto</h1>
+    </div>
+    <!-- <h1 text-uppercase text-center>correcto</h1> -->
+  </ng-template>
+
+  <p text-center>{{msj}}</p>
+
+
+</ion-content>

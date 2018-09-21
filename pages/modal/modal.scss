@@ -1,0 +1,64 @@
+page-modal {
+    background-color: rgba(0, 0, 0, 0.5);
+    ion-content.content{
+        top: 10%;
+        left: 10%;
+
+        width: 80%;
+        height: 80%;
+        // border-radius: 20px;
+        .scroll-content {
+            border-radius: 20px;
+        }
+    }
+
+    .scroll-content {
+      top: -14px;
+    }
+
+    hr {
+      background-color: black!important;
+      width: 114%;
+      margin-left: -7%;
+    }
+
+    h6 {
+      font-size: 1rem;
+    }
+
+
+    .mood-bar {
+      display: flex;
+    }
+
+    .emoji {
+      width: 20%;
+      height: 20%;
+    }
+
+    .radio-md .radio-icon {
+      top: -16px;
+    }
+
+    .item-md {
+      display: table-cell;
+      padding-left: 16px;
+      width: 50%;
+    }
+
+    .item-md.item-block .item-inner {
+      display: -webkit-inline-box;
+      border-bottom: none;
+    }
+
+    .div-button {
+      margin-top: 10%;
+      margin-left:60%;
+      display:flex;
+    }
+
+    .btn {
+      background-color: transparent;
+      font-size: 1.8rem;
+    }
+}

@@ -1,0 +1,65 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+		<img src="assets/imgs/bg.jpg" class="imgPos">
+		<ion-title text-center class="text" >Estado de cuenta</ion-title>
+    <!-- <button type="button" name="button">
+      <ion-icon name="ios-home"></ion-icon>
+    </button>
+
+    <ion-buttons end>
+      <button ion-button (click)="goBack()">
+        <ion-icon name="md-close"></ion-icon>
+      </button>
+    </ion-buttons> -->
+
+  </ion-navbar>
+
+</ion-header>
+<!----------------------------------------------------------------------------->
+
+<ion-content>
+  <ion-fab bottom right>
+    <button ion-fab (click)="goHome()">
+      <ion-icon name="ios-home"></ion-icon>
+    </button>
+  </ion-fab>
+
+  	<div [ngClass]="hasManyUfs ? 'display-ufs':'hidden'">
+	    <span>
+	  		<ion-item>
+	      		<ion-select cancelText="Cancelar"[(ngModel)]="partnershipSelected" (ngModelChange)="selectingPartnership()" placeholder="Consorcio">
+					    <ion-option *ngFor="let item of partnershipsList" [value]="item.ConsorcioId">{{item.ConsorcioDescripcion}}</ion-option>
+	    	  	</ion-select>
+	      	</ion-item>
+	    </span>
+
+	    <span>
+	  		<ion-item class="item" id="item1">
+	        	<ion-select cancelText="Cancelar" class="" [ngClass]="partnershipSelected ? '':'hidden'" [(ngModel)]="ufSelected" (ngModelChange)="selectingUF()" placeholder="Unidad">
+					    <ion-option *ngFor="let item of ufsActivesList" [value]="item.UnidadFuncionalId">{{item.UnidadFuncionalNombre}}</ion-option>
+	        	</ion-select>
+	      	</ion-item>
+		  </span>
+	</div>
+
+	<div [ngClass]="ufSelected ? 'saldo':'hidden'">
+	    <h4 ngController="balanceDate">Saldo al {{balanceDate}}</h4>
+	    <h6 ngController="balanceCash"> ${{balanceCash | europeFormat }}</h6>
+	    <h6 ngController="balanceExpiration">Vencimiento: {{balanceExpiration}}</h6>
+	    <h6 ngController="balancePaid">Pago: ${{balancePaid | europeFormat }}</h6>
+
+		<div class="liquidationsList">
+			<ion-list class="list-input text">
+		    	<button ion-item *ngFor="let item of liquidationsList" class="list-input text" (click)="goToLiquidationScreen(item)">
+		    		{{ item.FechaDesde }}<ion-icon name="ios-arrow-forward" item-end></ion-icon>
+			    </button>
+		  	</ion-list>
+		</div>
+
+	</div>
+
+</ion-content>

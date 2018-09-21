@@ -1,0 +1,44 @@
+
+
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+		<img src="assets/imgs/bg.jpg" class="imgPos">
+		<ion-title text-center class="text">Resumen de cuenta</ion-title>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-fab bottom right>
+    <button ion-fab (click)="goHome()">
+      <ion-icon name="ios-home"></ion-icon>
+    </button>
+  </ion-fab>
+
+		<h4 class="text" text-center ngController="balanceDate">{{balanceDate}}</h4>
+
+		<div padding class="saldo-style text" text-center>
+			<h4 ngController="balanceCash">Saldo a pagar: ${{balanceCash | europeFormat }}</h4>
+			<h4 ngController="balanceExpiration">Vencimiento: {{balanceExpiration}}</h4>
+		</div>
+		<h4 class="text" text-center>Resumen de cuenta</h4>
+    <button ion-button round outline class="boton email text" (click)="sendEmail()" text-uppercase>
+			<ion-icon name="mail"></ion-icon>
+      email
+    </button>
+    <button ion-button round outline class="boton descargar text" (click)="download()" text-uppercase>
+			<ion-icon name="download"></ion-icon>
+      descargar
+    </button>
+    <button ion-button round outline class="boton whatsapp text" (click)="sendWhatsapp()" text-uppercase>
+			<ion-icon name="logo-whatsapp"></ion-icon>
+      whatsapp
+    </button>
+
+</ion-content>

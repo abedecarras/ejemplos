@@ -1,0 +1,114 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+		<!-- <img src="assets/imgs/bg.jpg" class="imgPos"> -->
+    <ion-title text-center text-capitalize class="text">ver ticket</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-fab bottom right>
+    <button ion-fab (click)="goHome()">
+      <ion-icon name="ios-home"></ion-icon>
+    </button>
+  </ion-fab>
+
+  <!-- DIV DETALLE TICKET (MAIN) -->
+  <div class="detalle-ticket" text-center>
+
+    <div padding class="detalle">
+      <h4 class="text" text-capitalize>detalle del ticket</h4>
+      <ion-item text-left>
+        <h2>{{fecha}}</h2>
+        <ion-icon class="calendar" ios="ios-calendar" md="md-calendar" style="float:left"></ion-icon>
+
+      </ion-item>
+    </div>
+
+    <div class="detalle" [ngClass]="{'hidden' : isNeighbor}" text-center>
+      <h5>Creado por:</h5>
+      <ion-item class="vecino">
+
+        <!-- <ion-avatar> -->
+          <img class="avatar" src="./assets/imgs/user.svg">
+        <!-- </ion-avatar> -->
+        <p text-center id="nombre">{{ usuario }}</p>
+      </ion-item>
+
+    </div>
+
+    <!------------------------------------------------------------------------->
+
+    <div class="detalle grey" text-center>
+      <h4 text-capitalize>{{tipo}}</h4>
+      <h4 text-capitalize>estado: <span [ngClass]="{'green-border': estado_codigo =='FINALIZADO', 'violet-border': estado_codigo =='ENPROCESO', 'red-border': estado_codigo =='CANCELADO', 'red-border': estado_codigo =='RECHAZADO', 'grey-border': estado_codigo =='LEIDO', 'yellow-border': estado_codigo =='PENDIENTE'}">{{estado}}</span></h4>
+
+      <!-- CHECK AFECTA OTRA UNIDAD -->
+      <!-- <ion-item> -->
+
+        <ion-icon *ngIf="unidadAfectada == null; else mostrar" name="square-outline"></ion-icon>
+        <ng-template #mostrar>
+          <ion-icon name="md-checkbox"></ion-icon>
+        </ng-template>
+
+        <ion-label text-center class="grey posicion">Afecta a otra unidad</ion-label>
+        <!-- <ion-checkbox color="dark" checked="true"></ion-checkbox> -->
+
+      <!-- </ion-item> -->
+
+      <p>{{ unidadAfectada }}</p>
+    </div>
+
+    <!-- TEL CONTACTO --------------------------------------------------------->
+    <div class="detalle">
+      <h5>Teléfono de Contacto</h5>
+      <ion-item class="margin-inputs">
+        <p text-center>{{telefono}}</p>
+      </ion-item>
+      <div text-center>
+        <button [ngClass]="{'hidden' : isNeighbor}" (click)="call(telefono)" ion-button round text-uppercase>llamar</button>
+      </div>
+
+    </div>
+
+    <!-- COMENTARIOS ---------------------------------------------------------->
+    <div class="comentarios">
+      <h5>Comentarios</h5>
+      <ion-item class="margin-inputs">
+        <p text-center text-wrap> {{comentarios}}</p>
+      </ion-item>
+    </div>
+
+    <div>
+      <img *ngFor="let a of adjuntos" src="{{ a }}" alt="">
+    </div>
+
+    <div text-center>
+      <div [ngClass]="estado_codigo == 'LEIDO' || estado_codigo == 'PENDIENTE' ? '' : 'hidden'">
+        <button *ngIf="isNeighbor; else isAdmin" class="boton text" ion-button round text-uppercase (click)="cancelar()">cancelar ticket</button>
+      </div>
+      <ng-template #isAdmin>
+        <div [ngClass]="estado_codigo == 'LEIDO' ? '' : 'hidden'">
+          <button class="boton text" ion-button round text-uppercase (click)="enProgreso()">en progreso</button>
+          <button class="boton text" ion-button round text-uppercase (click)="rechazar()">rechazar</button>
+        </div>
+        <div [ngClass]="estado_codigo == 'ENPROCESO' ? '' : 'hidden'">
+          <button class="boton text" ion-button round text-uppercase (click)="cancelar()">cancelar</button>
+          <button class="boton text" ion-button round text-uppercase (click)="finalizar()">finalizar</button>
+        </div>
+      </ng-template>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+  </div>
+
+</ion-content>

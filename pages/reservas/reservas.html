@@ -1,0 +1,41 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <img src="assets/imgs/bg.jpg" class="imgPos">
+    <ion-title text-center class="text" text-wrap>Mis Reservas</ion-title>
+
+    <!-- <ion-buttons end>
+      <button ion-button (click)="goBack()">
+        <ion-icon name="md-close"></ion-icon>
+      </button>
+    </ion-buttons> -->
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <ion-fab bottom right>
+    <button ion-fab (click)="goHome()">
+      <ion-icon name="ios-home"></ion-icon>
+    </button>
+  </ion-fab>
+
+  <div class="pedidos" text-capitalize>
+    <p>Amenities reservados</p>
+  </div>
+
+  <ion-list>
+    <button ion-item class="text" *ngFor="let m of months" (click)="goMonth(m)" text-capitalize>
+      {{m}}
+      <ion-icon name="ios-arrow-forward" item-end class="grey"></ion-icon>
+    </button>
+  </ion-list>
+
+
+</ion-content>

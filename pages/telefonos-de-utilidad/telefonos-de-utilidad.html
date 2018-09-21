@@ -1,0 +1,49 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+		<img src="assets/imgs/bg.jpg" class="imgPos">
+		<ion-title class="text" text-center>Teléfonos Útiles</ion-title>
+	</ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <div [ngClass]="hasManyPartnerships ? 'posicion':'hidden'">
+    <span>
+      <ion-item>
+          <ion-select [(ngModel)]="partnershipSelected" (ngModelChange)="selectingPartnership()" placeholder="Consorcio">
+            <ion-option *ngFor="let item of partnershipsList" [value]="item.ConsorcioId">{{item.ConsorcioDescripcion}}</ion-option>
+          </ion-select>
+        </ion-item>
+    </span>
+  </div>
+
+  <ion-list *ngIf="!show; else showMore">
+    <button ion-item *ngFor="let n of phoneNumbers | slice:0:5; let i=index" (click)="action(n)">
+      <img class="phone-icon" src="{{'./assets/imgs/iconos tel/' + n.valorIcono + '.png'}}">
+      <label>{{n.descripcion +': '}}</label>
+      <label class="color">{{n.telefono}}</label>
+      <h6 class="padding grey size">{{n.tags}}</h6>
+      <ion-icon name="ios-arrow-forward" item-end class="grey"></ion-icon>
+    </button>
+    <button *ngIf="botonVerMas" class="boton" ion-button round text-uppercase (click)="changeText()">{{btn_txt}}</button>
+  </ion-list>
+
+  <ng-template #showMore>
+    <ion-list>
+      <button ion-item *ngFor="let n of phoneNumbers" (click)="action(n)">
+        <img class="phone-icon" src="{{'./assets/imgs/iconos tel/' + n.valorIcono + '.png'}}">
+        <label>{{n.descripcion +': '}}</label>
+        <label class="color">{{n.telefono}}</label>
+        <h6 class="padding grey size">{{n.tags}}</h6>
+        <ion-icon name="ios-arrow-forward" item-end class="grey"></ion-icon>
+      </button>
+      <button *ngIf="botonVerMas" class="boton" ion-button round text-uppercase (click)="changeText()">{{btn_txt}}</button>
+    </ion-list>
+  </ng-template>
+
+</ion-content>

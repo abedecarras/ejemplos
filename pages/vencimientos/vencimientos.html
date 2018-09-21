@@ -1,0 +1,88 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <img src="assets/imgs/bg.jpg" class="imgPos">
+    <ion-title text-center class="text" text-capitalize>calendario</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <div [ngClass]="hasManyPartnerships ? 'posicion':'hidden'">
+    <span>
+      <ion-item>
+          <ion-select [(ngModel)]="partnershipSelected" (ngModelChange)="updateEvents()" cancelText="Cancelar" placeholder="Consorcio">
+            <ion-option *ngFor="let item of partnershipsList" [value]="item.ConsorcioId">{{item.ConsorcioDescripcion}}</ion-option>
+          </ion-select>
+        </ion-item>
+    </span>
+  </div>
+
+  <div class="mes">
+    <button class="arrow" (click)="changeMonth('down')"><ion-icon name="ios-arrow-back" item-end class="grey"></ion-icon></button>
+    <h3>{{ this.mesLabel }}</h3>
+    <button class="arrow" (click)="changeMonth('up')"><ion-icon name="ios-arrow-forward" item-end class="grey"></ion-icon></button>
+  </div>
+
+  <ion-list *ngIf="!show; else showMore">
+    <!-- <div *ngIf="isAdmin; else isNot"> -->
+      <div *ngFor="let n of vencimientos | slice:0:5; let i=index">
+        <button ion-item (click)="action(n.id)">
+          <img class="phone-icon" src="{{'./assets/imgs/calendario/' + n.tipo + '.png'}}">
+          <div class="bloque">
+            <label>{{n.titulo}}</label>
+            <!-- <label class="color">{{n.telefono}}</label> -->
+            <h6 class="padding grey size">{{n.descripcion}}</h6>
+          </div>
+
+          <ion-icon name="ios-arrow-forward" item-end class="grey"></ion-icon>
+        </button>
+      </div>
+    <!-- </div> -->
+
+    <!-- <ng-template #isNot>
+      <div *ngFor="let n of vencimientos | slice:0:5; let i=index">
+        <button ion-item *ngIf="n.tipo === 'CONS'" (click)="action(n.id)">
+          <img class="phone-icon" src="{{'./assets/imgs/calendario/' + n.tipo + '.png'}}">
+          <div class="bloque">
+            <label>{{n.titulo}}</label>
+            <h6 class="padding grey size">{{n.descripcion}}</h6>
+          </div>
+
+          <ion-icon name="ios-arrow-forward" item-end class="grey"></ion-icon>
+        </button>
+      </div>
+    </ng-template> -->
+
+    <button *ngIf="botonVerMas" class="boton" ion-button round text-uppercase (click)="changeText()">{{btn_txt}}</button>
+  </ion-list>
+
+  <ng-template #showMore>
+    <ion-list>
+      <button ion-item *ngFor="let n of vencimientos" (click)="action(n.id)">
+        <img class="phone-icon" src="{{'./assets/imgs/calendario/' + n.tipo + '.png'}}">
+        <div class="bloque">
+          <label>{{n.titulo}}</label>
+          <!-- <label class="color">{{n.telefono}}</label> -->
+          <h6 class="padding grey size">{{n.descripcion}}</h6>
+        </div>
+        <ion-icon name="ios-arrow-forward" item-end class="grey"></ion-icon>
+      </button>
+      <button *ngIf="botonVerMas" class="boton" ion-button round text-uppercase (click)="changeText()">{{btn_txt}}</button>
+    </ion-list>
+  </ng-template>
+
+  <!-- <div text-center class="cartel">
+		<h1 class="family">Próximamente</h1>
+		<h6 class="family" style="padding-top:">Esta sección se actualizará</h6>
+		<h6 class="family" style="margin-top:-3%">a la brevedad.</h6>
+	</div> -->
+
+
+</ion-content>
